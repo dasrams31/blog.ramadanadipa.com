@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Avatar Rama Danadipa — kanji samurai">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#1c1c22"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="97" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="97" fill="none" stroke="#e23a2e" stroke-width="4"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#e23a2e" stroke-width="1" opacity="0.35"/>
+  <text x="100" y="141" text-anchor="middle" font-family="'Noto Serif JP','Hiragino Mincho ProN','Yu Mincho',serif" font-weight="900" font-size="104" fill="#f2ede3">侍</text>
+  <text x="100" y="172" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="13" letter-spacing="6" fill="#8a8a93">RAMA</text>
+</svg>
