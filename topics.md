@@ -5,7 +5,7 @@
 
 ## Laravel
 - [x] Cara install Laravel 12 di Windows 11 langkah demi langkah
-- [ ] Routing di Laravel: GET, POST, route parameter, dan route group
+- [x] Routing di Laravel: GET, POST, route parameter, dan route group
 - [ ] Eloquent relationship Laravel: one to many dengan contoh nyata
 - [x] Cara membuat REST API dengan Laravel untuk pemula
 - [ ] Validasi form Laravel: cara mudah dan pesan error Bahasa Indonesia
