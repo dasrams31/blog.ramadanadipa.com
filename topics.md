@@ -6,7 +6,7 @@
 ## Laravel
 - [x] Cara install Laravel 12 di Windows 11 langkah demi langkah
 - [x] Routing di Laravel: GET, POST, route parameter, dan route group
-- [ ] Eloquent relationship Laravel: one to many dengan contoh nyata
+- [x] Eloquent relationship Laravel: one to many dengan contoh nyata
 - [x] Cara membuat REST API dengan Laravel untuk pemula
 - [ ] Validasi form Laravel: cara mudah dan pesan error Bahasa Indonesia
 - [ ] Laravel authentication: login register dengan Breeze
@@ -65,3 +65,20 @@
 - [ ] Git untuk pemula: commit, branch, dan pull request
 - [ ] VS Code extensions wajib untuk web developer
 - [ ] Cara mengatasi tutorial hell: dari nonton ke bikin project
+
+## AI Trends (dijadwalkan: Selasa, Kamis, Sabtu — riset berita terkini dulu via web search sebelum nulis)
+- [ ] Tren model AI open source 2026: yang wajib dicoba developer Indonesia
+- [ ] Cara menjalankan LLM lokal di VPS: Llama, SmolLM2, dan Qwen
+- [ ] RAG sederhana: bikin chatbot yang baca dokumen sendiri dengan Python
+- [ ] AI coding assistant: perbandingan Copilot, Cursor, dan alternatif gratis
+- [ ] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
+- [ ] Prompt engineering praktis untuk developer: bukan teori, langsung contoh
+- [ ] AI agent: apa itu dan cara bikin agen AI sederhana pertama
+- [ ] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
+- [ ] Berita AI minggu ini: rangkuman yang penting buat developer
+- [ ] Model AI kecil tapi hebat: kapan 1B parameter cukup
+- [ ] AI untuk code review: setup otomatis di GitHub Actions
+- [ ] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
+- [ ] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
+- [ ] Biaya API AI: cara hemat pakai model lokal vs cloud
+- [ ] AI di production: lessons learned menjalankan model sendiri di VPS
