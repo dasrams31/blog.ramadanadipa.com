@@ -5,6 +5,7 @@ STAGE="$HOME/workspace/releases/blog.ramadanadipa.com"
 TOKEN_FILE="$HOME/workspace/mc-portal/config/github_token"
 
 cp "$HOME/workspace/blog/build.py" "$STAGE/"
+cp "$HOME/workspace/blog/serve.py" "$STAGE/"
 rm -rf "$STAGE/content" "$STAGE/static" "$STAGE/templates"
 cp -r "$HOME/workspace/blog/content" "$HOME/workspace/blog/static" "$HOME/workspace/blog/templates" "$STAGE/"
 cp "$HOME/workspace/blog/topics.md" "$STAGE/"

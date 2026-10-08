@@ -143,8 +143,10 @@ def jsonld_article(p):
     return "\n".join(f'<script type="application/ld+json">{x}</script>' for x in parts)
 
 def head_common(title, desc, url, jsonld=""):
+    # cache-buster: versi CSS dari mtime file, biar update langsung kelihatan
+    css_v = int(os.path.getmtime(os.path.join(STATIC, "css/style.css")))
     return tpl("head.html", title=html.escape(title), description=html.escape(desc),
-               url=url, jsonld=jsonld)
+               url=url, jsonld=jsonld, css_v=str(css_v))
 
 def render_page(filename, head, body_html):
     page = tpl("base.html", head=head, content=body_html, year=str(date.today().year))
@@ -165,7 +167,7 @@ def tag_slug(t):
 def card(p):
     tags = "".join(f'<a class="chip link" href="/tags/{tag_slug(t)}/">{html.escape(t)}</a>' for t in p["tags"][:3])
     return f"""<article class="card">
-  <div class="card-top"><span class="card-date">{id_date(p['date'])}</span><span class="card-read">{p['minutes']} mnt baca</span></div>
+  <div class="card-top"><span class="card-date">{id_date(p['date'])}</span><span class="card-views views" data-views-for="{p['slug']}">👁 <b>–</b></span><span class="card-read">{p['minutes']} mnt baca</span></div>
   <h3><a href="/posts/{p['slug']}/">{html.escape(p['title'])}</a></h3>
   <p>{html.escape(p['description'])}</p>
   <div class="chips">{tags}</div>
@@ -179,6 +181,7 @@ def build_index(posts):
   <p class="kicker">最新 — ARTIKEL TERBARU</p>
   <h2><a href="/posts/{latest['slug']}/">{html.escape(latest['title'])}</a></h2>
   <p class="lede">{html.escape(latest['description'])}</p>
+  <p class="hero-meta"><span class="views" data-views-for="{latest['slug']}">👁 <b>–</b> views</span></p>
   <a class="btn" href="/posts/{latest['slug']}/">Baca Artikel <span>→</span></a>
 </section>"""
     grid = "\n".join(card(p) for p in posts[1:13])
@@ -221,7 +224,7 @@ def build_post(p, posts):
     body = tpl("post_body.html", title=html.escape(p["title"]),
                date=id_date(p["date"]), minutes=str(p["minutes"]),
                tags=tags, toc=toc_html, article=body_html,
-               faq=faq_html, related=rel_html)
+               faq=faq_html, related=rel_html, slug=p["slug"])
     head = head_common(p["title"] + " — Blog Rama Danadipa", p["description"],
                        p["url"], jsonld_article(p))
     render_page(f"posts/{p['slug']}/index.html", head, body)

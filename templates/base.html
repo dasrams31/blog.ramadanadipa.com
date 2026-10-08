@@ -6,13 +6,35 @@
 <body>
 <header id="nav">
   <a class="brand" href="/"><span class="brand-kanji">侍</span><span class="brand-name">BLOG<span>.</span>RAMA</span></a>
-  <nav class="nav-links">
+  <button id="nav-toggle" aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="nav-links">
     <a href="/">Beranda</a>
     <a href="/#terbaru">Terbaru</a>
     <a href="/#topik">Topik</a>
     <a href="https://ramadanadipa.com/" target="_blank" rel="noopener">Portfolio ↗</a>
   </nav>
 </header>
+<script>
+(function(){var b=document.getElementById('nav-toggle'),m=document.getElementById('nav-links');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');
+b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Tutup menu':'Buka menu');});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');
+b.setAttribute('aria-expanded','false');}});})();
+</script>
+<script>
+/* view counter: hit artikel ini, tampilkan angka di semua .views */
+(function(){var els=document.querySelectorAll('[data-views-for]');if(!els.length)return;
+function fmt(n){if(n>=1e6)return (n/1e6).toFixed(1).replace('.',',')+' jt';
+if(n>=1e3)return (n/1e3).toFixed(1).replace('.',',')+' rb';return ''+n;}
+var slugs=[...new Set([...els].map(function(e){return e.dataset.viewsFor}))];
+var mark=document.getElementById('post-slug');
+var hit=mark?fetch('/api/hit',{method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({slug:mark.dataset.slug})}).catch(function(){}):Promise.resolve();
+hit.then(function(){
+fetch('/api/views?slug='+slugs.map(encodeURIComponent).join(',')).then(function(r){return r.json();})
+.then(function(d){els.forEach(function(e){var v=d[e.dataset.viewsFor];
+if(v!=null)e.querySelector('b').textContent=fmt(v);});}).catch(function(){});});})();
+</script>
 <main>
 {{content}}
 </main>

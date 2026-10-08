@@ -4,7 +4,8 @@
     <header class="post-head">
       <div class="chips">{{tags}}</div>
       <h1>{{title}}</h1>
-      <p class="post-meta">Oleh <strong>Rama Danadipa</strong> · {{date}} · {{minutes}} menit baca</p>
+      <p class="post-meta">Oleh <strong>Rama Danadipa</strong> · {{date}} · {{minutes}} menit baca · <span class="views" data-views-for="{{slug}}">👁 <b>–</b> views</span></p>
+      <span id="post-slug" data-slug="{{slug}}" hidden></span>
     </header>
     {{toc}}
     <div class="prose">
