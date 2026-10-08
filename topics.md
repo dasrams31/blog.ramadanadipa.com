@@ -67,7 +67,7 @@
 - [ ] Cara mengatasi tutorial hell: dari nonton ke bikin project
 
 ## AI Trends (dijadwalkan: Selasa, Kamis, Sabtu — riset berita terkini dulu via web search sebelum nulis)
-- [ ] Tren model AI open source 2026: yang wajib dicoba developer Indonesia
+- [x] Tren model AI open source 2026: yang wajib dicoba developer Indonesia
 - [ ] Cara menjalankan LLM lokal di VPS: Llama, SmolLM2, dan Qwen
 - [ ] RAG sederhana: bikin chatbot yang baca dokumen sendiri dengan Python
 - [ ] AI coding assistant: perbandingan Copilot, Cursor, dan alternatif gratis
