@@ -119,6 +119,12 @@ class Handler(SimpleHTTPRequestHandler):
     def log_message(self, *a):
         pass  # diam, hemat disk
 
+    def end_headers(self):
+        # RSS feed boleh diakses dari portfolio (JS fetch lintas subdomain)
+        if urlparse(self.path).path == "/feed.xml":
+            self.send_header("Access-Control-Allow-Origin", "*")
+        super().end_headers()
+
 
 if __name__ == "__main__":
     import sys
