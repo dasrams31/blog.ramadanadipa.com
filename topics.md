@@ -9,7 +9,7 @@
 - [x] Eloquent relationship Laravel: one to many dengan contoh nyata
 - [x] Cara membuat REST API dengan Laravel untuk pemula
 - [x] Validasi form Laravel: cara mudah dan pesan error Bahasa Indonesia
-- [ ] Laravel authentication: login register dengan Breeze
+- [x] Laravel authentication: login register dengan Breeze
 - [ ] Query builder vs Eloquent: kapan pakai yang mana
 - [ ] Cara upload file dan gambar di Laravel (storage & symlink)
 - [ ] Laravel middleware: membatasi akses admin dan user
