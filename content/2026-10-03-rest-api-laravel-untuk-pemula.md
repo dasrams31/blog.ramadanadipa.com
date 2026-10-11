@@ -7,14 +7,14 @@ faq:
   - Apa itu REST API?
   - REST API adalah antarmuka yang memungkinkan aplikasi berkomunikasi lewat HTTP menggunakan method standar (GET, POST, PUT, DELETE) dan format data JSON.
   - Apakah Laravel cocok untuk membuat REST API?
-  - Sangat cocok. Laravel punya routing API khusus, Eloquent ORM, validasi bawaan, dan Laravel Sanctum untuk autentikasi token — semua yang dibutuhkan API modern.
+  - Sangat cocok. Laravel punya routing API khusus, Eloquent ORM, validasi bawaan, dan Laravel Sanctum untuk autentikasi token, semua yang dibutuhkan API modern.
   - Bagaimana cara test API Laravel tanpa frontend?
   - Gunakan tools seperti Postman, Insomnia, atau ekstensi REST Client di VS Code. Laravel juga menyediakan testing otomatis via PHPUnit.
 ---
 
-REST API adalah tulang punggung aplikasi modern. Frontend React, aplikasi mobile Flutter, bahkan integrasi AI — semuanya bicara lewat API. Kabar baiknya, Laravel membuat proses ini sangat mudah.
+REST API adalah tulang punggung aplikasi modern. Frontend React, aplikasi mobile Flutter, bahkan integrasi AI, semuanya bicara lewat API. Kabar baiknya, Laravel membuat proses ini sangat mudah.
 
-Di artikel ini kita akan membangun REST API sederhana untuk mengelola data **artikel** — lengkap dengan operasi CRUD (Create, Read, Update, Delete).
+Di artikel ini kita akan membangun REST API sederhana untuk mengelola data **artikel**, lengkap dengan operasi CRUD (Create, Read, Update, Delete).
 
 ## Persiapan Project
 
@@ -142,7 +142,7 @@ class ArticleController extends Controller
 }
 ```
 
-Perhatikan `Article $article` di parameter — itu **route model binding**. Laravel otomatis mencari artikel berdasarkan ID di URL dan mengembalikan 404 kalau tidak ada. Satu baris kode menggantikan banyak boilerplate.
+Perhatikan `Article $article` di parameter, itu **route model binding**. Laravel otomatis mencari artikel berdasarkan ID di URL dan mengembalikan 404 kalau tidak ada. Satu baris kode menggantikan banyak boilerplate.
 
 ## Mendaftarkan Route
 
@@ -156,11 +156,11 @@ Route::apiResource('articles', ArticleController::class);
 
 Ini otomatis membuat 5 endpoint:
 
-- `GET /api/articles` — daftar artikel (dengan pagination)
-- `POST /api/articles` — buat artikel baru
-- `GET /api/articles/{id}` — detail satu artikel
-- `PUT /api/articles/{id}` — update artikel
-- `DELETE /api/articles/{id}` — hapus artikel
+- `GET /api/articles`, daftar artikel (dengan pagination)
+- `POST /api/articles`, buat artikel baru
+- `GET /api/articles/{id}`, detail satu artikel
+- `PUT /api/articles/{id}`, update artikel
+- `DELETE /api/articles/{id}`, hapus artikel
 
 Jalankan server dan test:
 
@@ -168,7 +168,7 @@ Jalankan server dan test:
 php artisan serve
 ```
 
-Buka `http://localhost:8000/api/articles` — kamu akan melihat JSON rapi dari ArticleResource.
+Buka `http://localhost:8000/api/articles`, kamu akan melihat JSON rapi dari ArticleResource.
 
 ## Menambahkan Autentikasi dengan Sanctum
 
@@ -196,7 +196,7 @@ Client login, menerima token, lalu menyertakannya di header `Authorization: Bear
 
 **Mengembalikan semua kolom database.** Kolom seperti `password` atau token internal tidak boleh bocor ke JSON. Selalu pakai API Resource.
 
-**Tidak memvalidasi input.** Validasi di controller dengan `$request->validate()` — Laravel otomatis mengembalikan error 422 dengan pesan yang jelas kalau input salah.
+**Tidak memvalidasi input.** Validasi di controller dengan `$request->validate()`, Laravel otomatis mengembalikan error 422 dengan pesan yang jelas kalau input salah.
 
 **N+1 query problem.** Kalau resource-mu mengakses relasi (misal `$this->author->name`), Laravel menjalankan satu query per artikel. Atasi dengan eager loading: `Article::with('author')->paginate(10)`.
 

@@ -22,8 +22,9 @@ m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.re
 b.setAttribute('aria-expanded','false');}});})();
 </script>
 <script>
-/* view counter: hit artikel ini, tampilkan angka di semua .views */
-(function(){var els=document.querySelectorAll('[data-views-for]');if(!els.length)return;
+/* view counter: hit artikel ini, tampilkan angka di semua .views (tunggu DOM siap) */
+document.addEventListener('DOMContentLoaded',function(){
+var els=document.querySelectorAll('[data-views-for]');if(!els.length)return;
 function fmt(n){if(n>=1e6)return (n/1e6).toFixed(1).replace('.',',')+' jt';
 if(n>=1e3)return (n/1e3).toFixed(1).replace('.',',')+' rb';return ''+n;}
 var slugs=[...new Set([...els].map(function(e){return e.dataset.viewsFor}))];
@@ -33,14 +34,14 @@ body:JSON.stringify({slug:mark.dataset.slug})}).catch(function(){}):Promise.reso
 hit.then(function(){
 fetch('/api/views?slug='+slugs.map(encodeURIComponent).join(',')).then(function(r){return r.json();})
 .then(function(d){els.forEach(function(e){var v=d[e.dataset.viewsFor];
-if(v!=null)e.querySelector('b').textContent=fmt(v);});}).catch(function(){});});})();
+if(v!=null)e.querySelector('b').textContent=fmt(v);});}).catch(function(){});});});
 </script>
 <main>
 {{content}}
 </main>
 <footer id="footer">
   <div class="foot-mark" aria-hidden="true">侍 BLOG</div>
-  <p>© {{year}} Rama Danadipa Putra Wijaya — <a href="https://ramadanadipa.com/">ramadanadipa.com</a></p>
+  <p>© {{year}} Rama Danadipa Putra Wijaya · <a href="https://ramadanadipa.com/">ramadanadipa.com</a></p>
   <p class="foot-sub">Tutorial programming Indonesia: Laravel, React, PostgreSQL, AI & VPS.</p>
 </footer>
 </body>

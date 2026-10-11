@@ -14,7 +14,7 @@ faq:
   - Jalankan `php artisan serve`, lalu buka `http://localhost:8000` di browser. Kalau halaman welcome Laravel muncul, instalasi berhasil.
 ---
 
-Menginstall Laravel di Windows sering bikin pemula nyerah sebelum mulai ngoding. Error PHP version, Composer nggak dikenali, database nggak konek — saya sendiri dulu menghabiskan satu sore cuma untuk urusan instalasi.
+Menginstall Laravel di Windows sering bikin pemula nyerah sebelum mulai ngoding. Error PHP version, Composer nggak dikenali, database nggak konek, saya sendiri dulu menghabiskan satu sore cuma untuk urusan instalasi.
 
 Artikel ini memangkas semua itu. Ikuti langkahnya berurutan, dan dalam 20 menit kamu punya Laravel 12 yang jalan di Windows 11.
 
@@ -22,8 +22,8 @@ Artikel ini memangkas semua itu. Ikuti langkahnya berurutan, dan dalam 20 menit 
 
 Ada dua jalur populer di Windows:
 
-1. **Laravel Herd** (rekomendasi) — aplikasi desktop gratis yang membundel PHP, Composer, dan server lokal. Satu installer, semua beres. Download di [herd.laravel.com](https://herd.laravel.com).
-2. **Manual (PHP + XAMPP/Laragon)** — install PHP sendiri, Composer sendiri, web server sendiri. Lebih fleksibel, tapi lebih banyak langkah dan potensi error.
+1. **Laravel Herd** (rekomendasi), aplikasi desktop gratis yang membundel PHP, Composer, dan server lokal. Satu installer, semua beres. Download di [herd.laravel.com](https://herd.laravel.com).
+2. **Manual (PHP + XAMPP/Laragon)**, install PHP sendiri, Composer sendiri, web server sendiri. Lebih fleksibel, tapi lebih banyak langkah dan potensi error.
 
 Kalau kamu pemula, pakai Herd. Sisanya di artikel ini mengasumsikan kamu pakai Herd, dengan catatan untuk jalur manual di bagian yang relevan.
 
@@ -31,7 +31,7 @@ Kalau kamu pemula, pakai Herd. Sisanya di artikel ini mengasumsikan kamu pakai H
 
 1. Download Herd untuk Windows dari herd.laravel.com.
 2. Jalankan installer, ikuti wizard sampai selesai.
-3. Buka Herd. Secara default ia menyediakan PHP versi terbaru yang kompatibel (8.3/8.4) — sudah memenuhi syarat Laravel 12 (PHP 8.2+).
+3. Buka Herd. Secara default ia menyediakan PHP versi terbaru yang kompatibel (8.3/8.4), sudah memenuhi syarat Laravel 12 (PHP 8.2+).
 
 Verifikasi di PowerShell:
 
@@ -46,7 +46,7 @@ Keduanya harus menampilkan versi tanpa error. Herd otomatis mendaftarkan PHP dan
 
 ## Langkah 2: Siapkan Database
 
-Laravel butuh database. Untuk belajar, **SQLite** adalah pilihan paling gampang — tidak perlu install server database sama sekali, datanya disimpan dalam satu file.
+Laravel butuh database. Untuk belajar, **SQLite** adalah pilihan paling gampang, tidak perlu install server database sama sekali, datanya disimpan dalam satu file.
 
 Cek dulu ekstensi `pdo_sqlite` aktif:
 
@@ -67,7 +67,7 @@ composer create-project laravel/laravel belajar-laravel
 cd belajar-laravel
 ```
 
-Perintah ini mendownload Laravel 12 beserta semua dependensinya. Tunggu sampai selesai — ukuran downloadnya lumayan, jadi pastikan koneksi stabil.
+Perintah ini mendownload Laravel 12 beserta semua dependensinya. Tunggu sampai selesai, ukuran downloadnya lumayan, jadi pastikan koneksi stabil.
 
 Cek struktur project yang terbentuk:
 
@@ -95,7 +95,7 @@ DB_CONNECTION=sqlite
 # DB_PASSWORD=
 ```
 
-Untuk SQLite, tidak ada yang perlu diubah — file database akan dibuat otomatis saat migration dijalankan.
+Untuk SQLite, tidak ada yang perlu diubah, file database akan dibuat otomatis saat migration dijalankan.
 
 Kalau memakai MySQL, ubah blok tersebut menjadi:
 
@@ -124,7 +124,7 @@ Jalankan migration untuk membuat tabel bawaan Laravel (users, sessions, cache):
 php artisan migrate
 ```
 
-Untuk SQLite, Laravel akan menanyakan apakah boleh membuat file `database/database.sqlite` — jawab `yes`.
+Untuk SQLite, Laravel akan menanyakan apakah boleh membuat file `database/database.sqlite`, jawab `yes`.
 
 Terakhir, jalankan development server:
 
@@ -132,7 +132,7 @@ Terakhir, jalankan development server:
 php artisan serve
 ```
 
-Buka `http://localhost:8000` di browser. Kalau halaman welcome Laravel 12 muncul, selamat — instalasi berhasil.
+Buka `http://localhost:8000` di browser. Kalau halaman welcome Laravel 12 muncul, selamat, instalasi berhasil.
 
 > **Catatan Herd:** kalau project-mu disimpan di folder yang dipantau Herd (misalnya `C:\Users\<nama>\Herd`), kamu bisa akses langsung via `http://belajar-laravel.test` tanpa `php artisan serve`.
 
@@ -150,7 +150,7 @@ Buka `http://localhost:8000` di browser. Kalau halaman welcome Laravel 12 muncul
 php artisan serve --port=8001
 ```
 
-**Permission error saat Composer install.** Jangan jalankan PowerShell sebagai Administrator kecuali perlu — dan jangan install project di folder sistem seperti `C:\Program Files`. Pakai folder user biasa.
+**Permission error saat Composer install.** Jangan jalankan PowerShell sebagai Administrator kecuali perlu, dan jangan install project di folder sistem seperti `C:\Program Files`. Pakai folder user biasa.
 
 ## Checklist Praktis Hari Ini
 
@@ -166,6 +166,6 @@ Route::get('/halo', function () {
 });
 ```
 
-Buka `http://localhost:8000/halo` — kalau teksnya muncul, kamu resmi sudah ngoding Laravel.
+Buka `http://localhost:8000/halo`, kalau teksnya muncul, kamu resmi sudah ngoding Laravel.
 
-Langkah berikutnya yang natural: pelajari routing dan Blade, lalu bangun REST API sederhana. Fondasinya sudah beres — tinggal bangun di atasnya.
+Langkah berikutnya yang natural: pelajari routing dan Blade, lalu bangun REST API sederhana. Fondasinya sudah beres, tinggal bangun di atasnya.

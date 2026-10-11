@@ -5,14 +5,14 @@ date: 2026-10-01
 tags: [laravel, ai, api, php]
 faq:
   - Berapa biaya menggunakan OpenAI API?
-  - Model seperti GPT-4o mini dibanderol per token dan sangat murah untuk project kecil — ratusan ribu request bisa di bawah Rp50 ribu. Selalu pasang limit di dashboard OpenAI.
+  - Model seperti GPT-4o mini dibanderol per token dan sangat murah untuk project kecil, ratusan ribu request bisa di bawah Rp50 ribu. Selalu pasang limit di dashboard OpenAI.
   - Apakah API key aman disimpan di file .env?
   - Ya, selama file .env tidak di-commit ke Git dan tidak bisa diakses publik. Jangan pernah hardcode API key di kode atau frontend JavaScript.
   - Apa bedanya API OpenAI dengan ChatGPT?
   - ChatGPT adalah aplikasinya, OpenAI API adalah layanan backend yang bisa kamu panggil dari kodemu sendiri untuk membangun fitur AI di aplikasimu.
 ---
 
-Menambahkan fitur AI ke aplikasi Laravel tidak serumit yang dibayangkan. Tanpa training model sendiri, kamu bisa memakai OpenAI API untuk ringkasan teks, chatbot, klasifikasi, sampai generasi konten — semuanya lewat HTTP request biasa.
+Menambahkan fitur AI ke aplikasi Laravel tidak serumit yang dibayangkan. Tanpa training model sendiri, kamu bisa memakai OpenAI API untuk ringkasan teks, chatbot, klasifikasi, sampai generasi konten, semuanya lewat HTTP request biasa.
 
 ## Persiapan: API Key
 
@@ -36,7 +36,7 @@ Tambahkan ke `config/services.php` agar bisa diakses rapi dari kode:
 
 ## Membuat Service Class
 
-Jangan panggil API langsung dari controller — bungkus dalam service agar mudah di-test dan diganti provider:
+Jangan panggil API langsung dari controller, bungkus dalam service agar mudah di-test dan diganti provider:
 
 ```php
 // app/Services/OpenAiService.php
@@ -117,7 +117,7 @@ public function summarize(string $text): string
 }
 ```
 
-Satu baris `Cache::remember` bisa memangkas biaya API hingga 80% untuk konten yang sering diakses — misalnya ringkasan artikel populer di blog.
+Satu baris `Cache::remember` bisa memangkas biaya API hingga 80% untuk konten yang sering diakses, misalnya ringkasan artikel populer di blog.
 
 ## Menangani Error dengan Anggun
 
@@ -134,7 +134,7 @@ try {
 }
 ```
 
-Untuk proses yang lama (lebih dari 30 detik), pindahkan ke **queue job** agar request HTTP tidak timeout — user dapat notifikasi saat hasilnya siap.
+Untuk proses yang lama (lebih dari 30 detik), pindahkan ke **queue job** agar request HTTP tidak timeout, user dapat notifikasi saat hasilnya siap.
 
 ## Prompt yang Baik = Output yang Baik
 
@@ -142,10 +142,10 @@ Kualitas output AI sangat ditentukan prompt. Tiga prinsip:
 
 1. **Spesifik.** "Ringkas dalam 3 poin Bahasa Indonesia" jauh lebih baik dari "ringkas ini".
 2. **Beri peran.** System prompt seperti "kamu adalah editor profesional" mengarahkan gaya bahasa.
-3. **Batasi format.** Minta output JSON kalau hasilnya akan diproses kode — jauh lebih reliable daripada parsing teks bebas.
+3. **Batasi format.** Minta output JSON kalau hasilnya akan diproses kode, jauh lebih reliable daripada parsing teks bebas.
 
 ## Langkah Selanjutnya
 
 Setelah dasar ini jalan, kamu bisa bereksperimen: **streaming response** agar user melihat jawaban muncul kata per kata (pakai Server-Sent Events), **function calling** agar AI bisa memanggil fungsi di aplikasimu, atau **RAG** agar AI menjawab berdasarkan dokumen milikmu sendiri.
 
-Integrasi AI bukan lagi fitur mewah — ini sudah jadi ekspektasi user. Mulai dari satu fitur kecil seperti ringkasan otomatis, dan kembangkan dari sana.
+Integrasi AI bukan lagi fitur mewah, ini sudah jadi ekspektasi user. Mulai dari satu fitur kecil seperti ringkasan otomatis, dan kembangkan dari sana.

@@ -12,7 +12,7 @@ faq:
   - Hanya untuk sinkronisasi dengan sistem luar: fetch API, timer, event listener, atau manipulasi DOM langsung. Kalau bisa dihitung dari state yang ada, jangan pakai useEffect.
 ---
 
-Dua hooks ini — `useState` dan `useEffect` — adalah 80% dari yang kamu butuhkan untuk membangun aplikasi React. Memahaminya dengan benar akan menghemat banyak jam debugging.
+Dua hooks ini, `useState` dan `useEffect`, adalah 80% dari yang kamu butuhkan untuk membangun aplikasi React. Memahaminya dengan benar akan menghemat banyak jam debugging.
 
 ## useState: Menyimpan Data yang Bisa Berubah
 
@@ -61,9 +61,9 @@ useEffect(() => {
 
 Array dependensi menentukan **kapan** efek jalan:
 
-- **Tidak ada array** — jalan setiap render (jarang dibutuhkan)
-- **Array kosong `[]`** — jalan sekali saat komponen pertama muncul
-- **`[count]`** — jalan saat pertama muncul DAN setiap `count` berubah
+- **Tidak ada array**, jalan setiap render (jarang dibutuhkan)
+- **Array kosong `[]`**, jalan sekali saat komponen pertama muncul
+- **`[count]`**, jalan saat pertama muncul DAN setiap `count` berubah
 
 ## Contoh Nyata: Fetch Data API
 
@@ -101,7 +101,7 @@ Perhatikan tiga state terpisah: data, loading. Pola ini muncul di hampir setiap 
 
 ## Cleanup: Membersihkan Efek
 
-Beberapa efek butuh dibersihkan — timer, subscription, event listener. Kembalikan fungsi cleanup dari efek:
+Beberapa efek butuh dibersihkan, timer, subscription, event listener. Kembalikan fungsi cleanup dari efek:
 
 ```jsx
 useEffect(() => {
@@ -114,13 +114,13 @@ useEffect(() => {
 }, []);
 ```
 
-Tanpa cleanup, timer terus jalan walau komponen sudah hilang — sumber klasik memory leak.
+Tanpa cleanup, timer terus jalan walau komponen sudah hilang, sumber klasik memory leak.
 
 ## Kesalahan Umum Pemula
 
 **1. Lupa dependency array.** Efek tanpa array jalan setiap render. Kalau di dalamnya ada `setState`, kamu dapat infinite loop.
 
-**2. Fetch data di dalam render, bukan di useEffect.** Render harus murni — tanpa side effect. Fetch adalah side effect, tempatnya di `useEffect`.
+**2. Fetch data di dalam render, bukan di useEffect.** Render harus murni, tanpa side effect. Fetch adalah side effect, tempatnya di `useEffect`.
 
 **3. Menghitung nilai turunan dengan useEffect + state.** Ini berlebihan:
 
@@ -147,4 +147,4 @@ Kalau nilainya bisa dihitung langsung saat render, hitung langsung. Simpan `useE
 - Butuh timer atau listener → `useEffect` + cleanup
 - Nilai yang bisa dihitung dari state lain → hitung langsung, tanpa hooks
 
-Kuasai dua hooks ini dan kamu sudah bisa membangun sebagian besar fitur aplikasi React modern. Hooks lain seperti `useRef`, `useMemo`, dan `useContext` adalah pelengkap — pelajari setelah fondasi ini kokoh.
+Kuasai dua hooks ini dan kamu sudah bisa membangun sebagian besar fitur aplikasi React modern. Hooks lain seperti `useRef`, `useMemo`, dan `useContext` adalah pelengkap, pelajari setelah fondasi ini kokoh.

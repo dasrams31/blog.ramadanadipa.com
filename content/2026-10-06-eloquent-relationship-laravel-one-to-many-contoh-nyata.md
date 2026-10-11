@@ -14,14 +14,14 @@ faq:
   - Gunakan method relasinya, misalnya $user->posts()->create([...]). Laravel otomatis mengisi foreign key, jadi tidak perlu menulis user_id secara manual.
 ---
 
-Relasi database adalah bagian yang paling sering bikin pemula Laravel nyerah setengah jalan. Padahal konsepnya sederhana: artikel ini pakai satu contoh nyata yang kamu pasti kenal — **satu penulis punya banyak artikel** — dan kita bangun sampai bisa jalan.
+Relasi database adalah bagian yang paling sering bikin pemula Laravel nyerah setengah jalan. Padahal konsepnya sederhana: artikel ini pakai satu contoh nyata yang kamu pasti kenal, **satu penulis punya banyak artikel**, dan kita bangun sampai bisa jalan.
 
 ## Skenario Nyatanya
 
 Bayangkan aplikasi blog. Ada dua tabel:
 
-- `users` — penulis
-- `posts` — artikel
+- `users`, penulis
+- `posts`, artikel
 
 Satu user bisa menulis banyak post. Satu post hanya dimiliki satu user. Ini pola klasik **one to many**, dan pola yang sama berlaku untuk: satu kategori punya banyak produk, satu order punya banyak item, satu sekolah punya banyak siswa.
 
@@ -41,7 +41,7 @@ Schema::create('posts', function (Blueprint $table) {
 });
 ```
 
-`constrained()` otomatis membuat foreign key ke tabel `users`. `cascadeOnDelete()` artinya kalau user dihapus, semua post-nya ikut terhapus — masuk akal untuk contoh ini, tapi pikir dua kali kalau datanya penting.
+`constrained()` otomatis membuat foreign key ke tabel `users`. `cascadeOnDelete()` artinya kalau user dihapus, semua post-nya ikut terhapus, masuk akal untuk contoh ini, tapi pikir dua kali kalau datanya penting.
 
 Jalankan:
 
@@ -73,7 +73,7 @@ public function user(): BelongsTo
 }
 ```
 
-Sudah. Itu seluruh definisi relasinya. Laravel menebak nama foreign key (`user_id`) dan tabel dari konvensi penamaan — selama kamu mengikuti konvensi, tidak perlu konfigurasi tambahan.
+Sudah. Itu seluruh definisi relasinya. Laravel menebak nama foreign key (`user_id`) dan tabel dari konvensi penamaan, selama kamu mengikuti konvensi, tidak perlu konfigurasi tambahan.
 
 ## Langkah 3: Pakai Relasinya
 
@@ -195,7 +195,7 @@ Relasi bisa dirantai. Misal setiap post punya banyak komentar (`Post hasMany Com
 $users = User::with('posts.comments')->get();
 ```
 
-Satu panggilan `with('posts.comments')` mengambil tiga tabel sekaligus — user, post, dan komentar — tanpa N+1 di level mana pun. Aturan praktisnya: **setiap titik di rantai properti relasi di dalam loop harus sudah di-`with()`**.
+Satu panggilan `with('posts.comments')` mengambil tiga tabel sekaligus, user, post, dan komentar, tanpa N+1 di level mana pun. Aturan praktisnya: **setiap titik di rantai properti relasi di dalam loop harus sudah di-`with()`**.
 
 Satu catatan penting soal mass assignment: `create()` lewat relasi tetap tunduk pada `$fillable` di model. Jadi pastikan model `Post` mengizinkan kolom yang kamu isi:
 
@@ -205,7 +205,7 @@ Satu catatan penting soal mass assignment: `create()` lewat relasi tetap tunduk 
 protected $fillable = ['title', 'body'];
 ```
 
-Tidak perlu memasukkan `user_id` ke `$fillable` — Laravel mengisinya sendiri lewat relasi, dan justru lebih aman begitu karena user tidak bisa memalsukan pemilik post lewat input form.
+Tidak perlu memasukkan `user_id` ke `$fillable`, Laravel mengisinya sendiri lewat relasi, dan justru lebih aman begitu karena user tidak bisa memalsukan pemilik post lewat input form.
 
 ## Coba Sekarang (5 Menit)
 
@@ -214,7 +214,7 @@ Tidak perlu memasukkan `user_id` ke `$fillable` — Laravel mengisinya sendiri l
 3. Di `php artisan tinker`, buat satu user dan tiga post lewat `$user->posts()->create([...])`.
 4. Ambil user dengan `User::with('posts')->find(1)` dan cek `$user->posts->count()`.
 
-Kalau empat langkah itu jalan tanpa error, kamu sudah paham 80% relasi Eloquent yang dipakai di project nyata. Sisanya — many to many, polymorphic — tinggal pengembangan pola yang sama.
+Kalau empat langkah itu jalan tanpa error, kamu sudah paham 80% relasi Eloquent yang dipakai di project nyata. Sisanya, many to many, polymorphic, tinggal pengembangan pola yang sama.
 
 ## Kapan Tidak Pakai Relasi Eloquent?
 

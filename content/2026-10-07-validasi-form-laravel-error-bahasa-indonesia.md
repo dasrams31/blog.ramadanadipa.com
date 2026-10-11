@@ -9,12 +9,12 @@ faq:
   - Bagaimana cara mengganti pesan error validasi Laravel ke Bahasa Indonesia?
   - Ada dua cara: kirim array pesan custom sebagai argumen ketiga $request->validate(), atau buat file lang/id/validation.php berisi terjemahan lalu ubah 'locale' => 'id' di config/app.php agar berlaku global.
   - Apa bedanya $request->validate() dengan Form Request?
-  - $request->validate() cocok untuk form kecil karena ditulis langsung di controller. Form Request (php artisan make:request) memindahkan rules, pesan custom, dan otorisasi ke class tersendiri — lebih rapi untuk form besar dan bisa dipakai ulang.
+  - $request->validate() cocok untuk form kecil karena ditulis langsung di controller. Form Request (php artisan make:request) memindahkan rules, pesan custom, dan otorisasi ke class tersendiri, lebih rapi untuk form besar dan bisa dipakai ulang.
   - Bagaimana validasi unique saat update data supaya tidak konflik dengan data sendiri?
   - Pakai Rule::unique('users')->ignore($user->id) agar baris data yang sedang diupdate dikecualikan dari pengecekan unique. Tanpa ignore, update tanpa mengubah email pun akan gagal validasi.
 ---
 
-Form tanpa validasi itu seperti pintu tanpa kunci: user bisa memasukkan apa saja, dan database kamu yang menanggung akibatnya. Kabar baiknya, Laravel punya sistem validasi yang menurut saya salah satu yang paling enak dipakai di antara framework PHP — dan artikel ini membahasnya sampai tuntas, termasuk cara membuat pesan error-nya berbahasa Indonesia.
+Form tanpa validasi itu seperti pintu tanpa kunci: user bisa memasukkan apa saja, dan database kamu yang menanggung akibatnya. Kabar baiknya, Laravel punya sistem validasi yang menurut saya salah satu yang paling enak dipakai di antara framework PHP, dan artikel ini membahasnya sampai tuntas, termasuk cara membuat pesan error-nya berbahasa Indonesia.
 
 ## Cara Paling Cepat: $request->validate()
 
@@ -37,7 +37,7 @@ public function store(Request $request)
 }
 ```
 
-Perilaku bawaannya sudah pintar: kalau validasi gagal, Laravel otomatis me-redirect kembali ke form sebelumnya, menyimpan pesan error di session, dan menyimpan input lama supaya tidak hilang. Kalau request-nya AJAX/JSON, ia mengembalikan response 422 dengan daftar error — tanpa kamu perlu menulis satu baris pun kode redirect manual.
+Perilaku bawaannya sudah pintar: kalau validasi gagal, Laravel otomatis me-redirect kembali ke form sebelumnya, menyimpan pesan error di session, dan menyimpan input lama supaya tidak hilang. Kalau request-nya AJAX/JSON, ia mengembalikan response 422 dengan daftar error, tanpa kamu perlu menulis satu baris pun kode redirect manual.
 
 Tiga aturan di contoh itu sudah mencakup 80% kebutuhan form:
 
@@ -66,7 +66,7 @@ $request->validate([
 
 ## Menampilkan Error di Blade
 
-Pesan error tidak muncul sendiri — kamu harus menampilkannya di template. Pola standarnya:
+Pesan error tidak muncul sendiri, kamu harus menampilkannya di template. Pola standarnya:
 
 ```blade
 <form method="POST" action="/register">
@@ -99,8 +99,8 @@ Pesan error tidak muncul sendiri — kamu harus menampilkannya di template. Pola
 
 Dua hal penting di sini:
 
-1. **`old('name')`** — mengisi kembali input dengan data yang user ketik sebelum validasi gagal. Tanpa ini, user harus mengetik ulang semuanya dan pasti kesal.
-2. **`@error('name')`** — blok ini hanya tampil kalau field `name` gagal validasi. Variabel `$message` berisi pesan error-nya.
+1. **`old('name')`**, mengisi kembali input dengan data yang user ketik sebelum validasi gagal. Tanpa ini, user harus mengetik ulang semuanya dan pasti kesal.
+2. **`@error('name')`**, blok ini hanya tampil kalau field `name` gagal validasi. Variabel `$message` berisi pesan error-nya.
 
 Kalau mau menampilkan semua error sekaligus di atas form:
 
@@ -182,7 +182,7 @@ Lalu ubah locale aplikasi di `config/app.php`:
 
 Sejak itu, semua pesan validasi di seluruh aplikasi otomatis berbahasa Indonesia. Bagian `attributes` mengubah nama field teknis (`password`) menjadi nama yang ramah (`kata sandi`), sehingga pesannya terbaca natural: *"Kata sandi minimal 8 karakter."* bukan *"The password must be at least 8 characters."*
 
-Kamu tidak perlu menerjemahkan semua aturan sekaligus — cukup yang aplikasimu pakai. Yang belum diterjemahkan akan jatuh ke `fallback_locale` (Inggris), jadi tidak ada yang rusak.
+Kamu tidak perlu menerjemahkan semua aturan sekaligus, cukup yang aplikasimu pakai. Yang belum diterjemahkan akan jatuh ke `fallback_locale` (Inggris), jadi tidak ada yang rusak.
 
 ## Naik Level: Form Request
 
@@ -241,13 +241,13 @@ public function store(StoreProductRequest $request)
 }
 ```
 
-Validasi berjalan otomatis sebelum method controller dieksekusi. `$request->validated()` hanya mengembalikan field yang ada aturannya — field asing yang dikirim user nakal otomatis dibuang. Bonus: `authorize()` memberi tempat resmi untuk cek izin akses.
+Validasi berjalan otomatis sebelum method controller dieksekusi. `$request->validated()` hanya mengembalikan field yang ada aturannya, field asing yang dikirim user nakal otomatis dibuang. Bonus: `authorize()` memberi tempat resmi untuk cek izin akses.
 
 ## Kesalahan Umum Pemula
 
-**1. Lupa `@csrf` di form.** Tanpa token CSRF, Laravel menolak POST dengan error 419. Setiap form POST wajib ada `@csrf` — ini bukan bagian validasi, tapi error yang paling sering dikira masalah validasi.
+**1. Lupa `@csrf` di form.** Tanpa token CSRF, Laravel menolak POST dengan error 419. Setiap form POST wajib ada `@csrf`, ini bukan bagian validasi, tapi error yang paling sering dikira masalah validasi.
 
-**2. Validasi dijalankan setelah data disimpan.** Urutannya harus: validasi dulu, baru simpan. `$request->validate()` melempar exception saat gagal, jadi kode setelahnya tidak jalan — itu memang desainnya. Jangan dibalik.
+**2. Validasi dijalankan setelah data disimpan.** Urutannya harus: validasi dulu, baru simpan. `$request->validate()` melempar exception saat gagal, jadi kode setelahnya tidak jalan, itu memang desainnya. Jangan dibalik.
 
 **3. Aturan `unique` gagal saat update data.** Ini jebakan klasik:
 
@@ -268,9 +268,9 @@ use Illuminate\Validation\Rule;
 ],
 ```
 
-**4. Mengandalkan validasi JavaScript saja.** Validasi di browser itu untuk UX, bukan keamanan — user bisa mematikannya atau mengirim request langsung via curl/Postman. Validasi server-side di Laravel hukumnya wajib.
+**4. Mengandalkan validasi JavaScript saja.** Validasi di browser itu untuk UX, bukan keamanan, user bisa mematikannya atau mengirim request langsung via curl/Postman. Validasi server-side di Laravel hukumnya wajib.
 
-**5. Tidak memakai `old()` sehingga input hilang.** User mengisi 10 field, satu gagal, semua hilang. Mereka tidak akan mengisi ulang — mereka akan pergi.
+**5. Tidak memakai `old()` sehingga input hilang.** User mengisi 10 field, satu gagal, semua hilang. Mereka tidak akan mengisi ulang, mereka akan pergi.
 
 ## Langkah Praktis: Coba Sekarang
 
@@ -280,4 +280,4 @@ use Illuminate\Validation\Rule;
 4. Tambahkan pesan custom Bahasa Indonesia, lalu upgrade ke file `lang/id/validation.php` + locale `id`.
 5. Refactor ke Form Request dan rasakan controller-mu jadi jauh lebih bersih.
 
-Validasi yang baik itu tidak terasa oleh user yang mengisi dengan benar, tapi sangat membantu user yang salah — pesan yang jelas dalam bahasa mereka sendiri adalah perbedaan antara form yang dipakai dan form yang ditinggalkan.
+Validasi yang baik itu tidak terasa oleh user yang mengisi dengan benar, tapi sangat membantu user yang salah, pesan yang jelas dalam bahasa mereka sendiri adalah perbedaan antara form yang dipakai dan form yang ditinggalkan.

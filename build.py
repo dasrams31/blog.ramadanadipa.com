@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static blog generator for blog.ramadanadipa.com — stdlib only."""
+"""Static blog generator for blog.ramadanadipa.com (stdlib only)."""
 import os, re, json, shutil, html
 from datetime import date
 from xml.sax.saxutils import escape as xesc
@@ -178,7 +178,7 @@ def build_index(posts):
     hero_post = ""
     if latest:
         hero_post = f"""<section class="hero-post">
-  <p class="kicker">最新 — ARTIKEL TERBARU</p>
+  <p class="kicker">最新 · ARTIKEL TERBARU</p>
   <h2><a href="/posts/{latest['slug']}/">{html.escape(latest['title'])}</a></h2>
   <p class="lede">{html.escape(latest['description'])}</p>
   <p class="hero-meta"><span class="views" data-views-for="{latest['slug']}">👁 <b>–</b> views</span></p>
@@ -190,7 +190,7 @@ def build_index(posts):
     body = tpl("index_body.html", hero_post=hero_post, grid=grid, tagcloud=tagcloud,
                count=str(len(posts)))
     head = head_common(
-        "Blog — Rama Danadipa | Tutorial Laravel, React, AI & VPS",
+        "Blog Rama Danadipa: Tutorial Laravel, React, AI & VPS",
         "Blog programming Indonesia: tutorial Laravel, React/Next.js, PostgreSQL, integrasi AI, dan deploy VPS. Artikel baru setiap hari.",
         SITE + "/",
         '<script type="application/ld+json">' + json.dumps({
@@ -225,7 +225,7 @@ def build_post(p, posts):
                date=id_date(p["date"]), minutes=str(p["minutes"]),
                tags=tags, toc=toc_html, article=body_html,
                faq=faq_html, related=rel_html, slug=p["slug"])
-    head = head_common(p["title"] + " — Blog Rama Danadipa", p["description"],
+    head = head_common(p["title"] + " · Blog Rama Danadipa", p["description"],
                        p["url"], jsonld_article(p))
     render_page(f"posts/{p['slug']}/index.html", head, body)
 
@@ -237,7 +237,7 @@ def build_tags(posts):
     for t, ps in by_tag.items():
         grid = "\n".join(card(p) for p in ps)
         body = tpl("tag_body.html", tag=html.escape(t), count=str(len(ps)), grid=grid)
-        head = head_common(f"Topik: {t} — Blog Rama Danadipa",
+        head = head_common(f"Topik: {t} · Blog Rama Danadipa",
                            f"Kumpulan artikel tentang {t}: tutorial dan tips programming Indonesia.",
                            f"{SITE}/tags/{t}/")
         render_page(f"tags/{tag_slug(t)}/index.html", head, body)

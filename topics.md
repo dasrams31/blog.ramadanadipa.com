@@ -10,7 +10,7 @@
 - [x] Cara membuat REST API dengan Laravel untuk pemula
 - [x] Validasi form Laravel: cara mudah dan pesan error Bahasa Indonesia
 - [x] Laravel authentication: login register dengan Breeze
-- [ ] Query builder vs Eloquent: kapan pakai yang mana
+- [x] Query builder vs Eloquent: kapan pakai yang mana
 - [ ] Cara upload file dan gambar di Laravel (storage & symlink)
 - [ ] Laravel middleware: membatasi akses admin dan user
 - [ ] Seeder dan factory Laravel: isi database dummy otomatis
@@ -69,6 +69,7 @@
 ## AI Trends (dijadwalkan: Selasa, Kamis, Sabtu — riset berita terkini dulu via web search sebelum nulis)
 - [x] Tren model AI open source 2026: yang wajib dicoba developer Indonesia
 - [x] Cara menjalankan LLM lokal di VPS: Llama, SmolLM2, dan Qwen
+- [ ] 20 ide SaaS trend 2026: peluang bisnis software yang lagi naik daun
 - [ ] RAG sederhana: bikin chatbot yang baca dokumen sendiri dengan Python
 - [ ] AI coding assistant: perbandingan Copilot, Cursor, dan alternatif gratis
 - [ ] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
