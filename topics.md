@@ -11,7 +11,7 @@
 - [x] Validasi form Laravel: cara mudah dan pesan error Bahasa Indonesia
 - [x] Laravel authentication: login register dengan Breeze
 - [x] Query builder vs Eloquent: kapan pakai yang mana
-- [ ] Cara upload file dan gambar di Laravel (storage & symlink)
+- [x] Cara upload file dan gambar di Laravel (storage & symlink)
 - [ ] Laravel middleware: membatasi akses admin dan user
 - [ ] Seeder dan factory Laravel: isi database dummy otomatis
 - [ ] Cara kirim email di Laravel dengan Mailtrap/SMTP Gmail
