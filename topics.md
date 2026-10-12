@@ -70,6 +70,7 @@
 - [x] Tren model AI open source 2026: yang wajib dicoba developer Indonesia
 - [x] Cara menjalankan LLM lokal di VPS: Llama, SmolLM2, dan Qwen
 - [ ] 20 ide SaaS trend 2026: peluang bisnis software yang lagi naik daun
+  (riset awal 2026-10-12 tersimpan di ~/workspace/blog/research/2026-10-13-saas-trends.md — baca sebelum nulis, lalu tetap verifikasi klaim faktual)
 - [ ] RAG sederhana: bikin chatbot yang baca dokumen sendiri dengan Python
 - [ ] AI coding assistant: perbandingan Copilot, Cursor, dan alternatif gratis
 - [ ] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
