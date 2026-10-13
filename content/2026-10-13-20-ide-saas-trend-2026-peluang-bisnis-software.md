@@ -130,3 +130,16 @@ Outputnya: `Total : $15.5 per bulan`. Dari sini kamu bisa lanjut: tarik data usa
 ## Penutup
 
 Dari 20 ide di atas, pilih satu yang paling dekat dengan masalah yang pernah kamu rasakan sendiri. Lalu minggu ini juga: lakukan 3 wawancara masalah pertama. Produk yang lahir dari masalah berbayar selalu menang melawan produk yang lahir dari "kayaknya keren".
+
+## Sumber dan referensi
+
+Angka dan data dalam artikel ini dirujuk dari sumber berikut (diakses 13 Oktober 2026):
+
+- Pew Research Center (22 Juli 2025), "Google Users Are Less Likely to Click on Links When an AI Summary Appears in the Results": https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/
+- iPullRank, "AI Search Statistics & Trends 2026" (merangkum studi Ahrefs Februari 2026): https://ipullrank.com/ai-search-manual/ai-search-statistics-trends
+- Stripe, "2025 Annual Letter" (terbit Februari 2026): https://assets.stripeassets.com/fzn2n1nzq965/IpU9Th5UvfMD586WbQ5om/9c1dc7928e5a87da7806660b5ca99471/Stripe-annual-letter-2025-mobile.pdf
+- Majalah ICT, "Tren Startup Indonesia 2026: AI Naik Daun, Era Bakar Uang Berakhir": https://www.majalahict.com/tren-startup-indonesia-2026-ai-naik-daun-era-bakar-uang-berakhir/
+- Majalah ICT, "Funding Startup Indonesia 2026, Dari Era Euforia Menuju Era Seleksi Alam": https://www.majalahict.com/funding-startup-indonesia-2026-dari-era-euforia-menuju-era-seleksi-alam/
+- TechRepublic (Gartner IT Symposium), "Gartner Predicts Robust Cloud Computing Market Till 2027": https://www.techrepublic.com/article/gartner-predicts-robust-cloud-market/
+
+Sumber lain yang disebut di badan artikel: appscrip.com (data pasar SaaS dan denda GDPR), cubix.co (belanja public cloud), editorialge.com (kumpulan ide SaaS AI), preuve.ai (ide vertical SaaS), liqteq.com, blog.mean.ceo, topaicompanies.co, aalpha.net (tren vertical AI SaaS dan pricing), superframeworks.com (data TrustMRR), webpronews.com (CFO Signal Report 2026), idebisnis.or.id, solusibisnis.com, jakartainvest.com (konteks UMKM dan startup Indonesia).
