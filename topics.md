@@ -12,7 +12,7 @@
 - [x] Laravel authentication: login register dengan Breeze
 - [x] Query builder vs Eloquent: kapan pakai yang mana
 - [x] Cara upload file dan gambar di Laravel (storage & symlink)
-- [ ] Laravel middleware: membatasi akses admin dan user
+- [x] Laravel middleware: membatasi akses admin dan user
 - [ ] Seeder dan factory Laravel: isi database dummy otomatis
 - [ ] Cara kirim email di Laravel dengan Mailtrap/SMTP Gmail
 - [ ] Laravel queue dan jobs: kirim email tanpa bikin web lemot
