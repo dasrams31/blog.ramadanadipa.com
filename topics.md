@@ -73,7 +73,7 @@
   (riset awal 2026-10-12 tersimpan di ~/workspace/blog/research/2026-10-13-saas-trends.md — baca sebelum nulis, lalu tetap verifikasi klaim faktual)
 - [x] RAG sederhana: bikin chatbot yang baca dokumen sendiri dengan Python
 - [x] AI coding assistant: perbandingan Copilot, Cursor, dan alternatif gratis
-- [ ] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
+- [x] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
 - [ ] Prompt engineering praktis untuk developer: bukan teori, langsung contoh
 - [ ] AI agent: apa itu dan cara bikin agen AI sederhana pertama
 - [ ] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
