@@ -16,7 +16,7 @@
 - [x] Seeder dan factory Laravel: isi database dummy otomatis
 - [x] Cara kirim email di Laravel dengan Mailtrap/SMTP Gmail
 - [x] Laravel queue dan jobs: kirim email tanpa bikin web lemot
-- [ ] Pagination dan search sederhana di Laravel Blade
+- [x] Pagination dan search sederhana di Laravel Blade
 
 ## React / Next.js
 - [x] useState dan useEffect di React: penjelasan untuk pemula
