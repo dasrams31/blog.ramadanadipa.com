@@ -74,7 +74,7 @@
 - [x] RAG sederhana: bikin chatbot yang baca dokumen sendiri dengan Python
 - [x] AI coding assistant: perbandingan Copilot, Cursor, dan alternatif gratis
 - [x] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
-- [ ] Prompt engineering praktis untuk developer: bukan teori, langsung contoh
+- [x] Prompt engineering praktis untuk developer: bukan teori, langsung contoh
 - [ ] AI agent: apa itu dan cara bikin agen AI sederhana pertama
 - [ ] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
 - [ ] Berita AI minggu ini: rangkuman yang penting buat developer
