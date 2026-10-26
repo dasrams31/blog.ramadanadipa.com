@@ -22,7 +22,7 @@
 - [x] useState dan useEffect di React: penjelasan untuk pemula
 - [x] Cara fetch data API di React dengan useEffect dan Axios
 - [x] React props dan component: konsep dasar dengan contoh
-- [ ] Next.js App Router vs Pages Router: mana yang dipelajari dulu
+- [x] Next.js App Router vs Pages Router: mana yang dipelajari dulu
 - [ ] Cara membuat form terkontrol (controlled form) di React
 - [ ] React Router: navigasi antar halaman tanpa reload
 - [ ] Conditional rendering di React: 5 pola yang wajib tahu
