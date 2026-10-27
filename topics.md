@@ -76,7 +76,7 @@
 - [x] Integrasi AI ke aplikasi Laravel: contoh chatbot customer service
 - [x] Prompt engineering praktis untuk developer: bukan teori, langsung contoh
 - [x] AI agent: apa itu dan cara bikin agen AI sederhana pertama
-- [ ] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
+- [x] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
 - [ ] Berita AI minggu ini: rangkuman yang penting buat developer
 - [ ] Model AI kecil tapi hebat: kapan 1B parameter cukup
 - [ ] AI untuk code review: setup otomatis di GitHub Actions
