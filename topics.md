@@ -23,7 +23,7 @@
 - [x] Cara fetch data API di React dengan useEffect dan Axios
 - [x] React props dan component: konsep dasar dengan contoh
 - [x] Next.js App Router vs Pages Router: mana yang dipelajari dulu
-- [ ] Cara membuat form terkontrol (controlled form) di React
+- [x] Cara membuat form terkontrol (controlled form) di React
 - [ ] React Router: navigasi antar halaman tanpa reload
 - [ ] Conditional rendering di React: 5 pola yang wajib tahu
 - [ ] Cara deploy aplikasi Next.js ke VPS dengan PM2
