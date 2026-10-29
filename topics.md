@@ -77,7 +77,7 @@
 - [x] Prompt engineering praktis untuk developer: bukan teori, langsung contoh
 - [x] AI agent: apa itu dan cara bikin agen AI sederhana pertama
 - [x] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
-- [ ] Berita AI minggu ini: rangkuman yang penting buat developer
+- [x] Berita AI minggu ini: rangkuman yang penting buat developer
 - [ ] Model AI kecil tapi hebat: kapan 1B parameter cukup
 - [ ] AI untuk code review: setup otomatis di GitHub Actions
 - [ ] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
