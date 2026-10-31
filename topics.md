@@ -78,7 +78,7 @@
 - [x] AI agent: apa itu dan cara bikin agen AI sederhana pertama
 - [x] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
 - [x] Berita AI minggu ini: rangkuman yang penting buat developer
-- [ ] Model AI kecil tapi hebat: kapan 1B parameter cukup
+- [x] Model AI kecil tapi hebat: kapan 1B parameter cukup
 - [ ] AI untuk code review: setup otomatis di GitHub Actions
 - [ ] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
 - [ ] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
