@@ -25,7 +25,7 @@
 - [x] Next.js App Router vs Pages Router: mana yang dipelajari dulu
 - [x] Cara membuat form terkontrol (controlled form) di React
 - [x] React Router: navigasi antar halaman tanpa reload
-- [ ] Conditional rendering di React: 5 pola yang wajib tahu
+- [x] Conditional rendering di React: 5 pola yang wajib tahu
 - [ ] Cara deploy aplikasi Next.js ke VPS dengan PM2
 
 ## PostgreSQL / Database
