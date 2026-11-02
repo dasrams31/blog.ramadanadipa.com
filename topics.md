@@ -26,7 +26,7 @@
 - [x] Cara membuat form terkontrol (controlled form) di React
 - [x] React Router: navigasi antar halaman tanpa reload
 - [x] Conditional rendering di React: 5 pola yang wajib tahu
-- [ ] Cara deploy aplikasi Next.js ke VPS dengan PM2
+- [x] Cara deploy aplikasi Next.js ke VPS dengan PM2
 
 ## PostgreSQL / Database
 - [ ] PostgreSQL vs MySQL: mana yang cocok untuk project kamu
