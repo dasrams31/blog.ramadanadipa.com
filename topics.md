@@ -79,8 +79,18 @@
 - [x] Fine-tuning vs RAG vs prompt: kapan pakai yang mana
 - [x] Berita AI minggu ini: rangkuman yang penting buat developer
 - [x] Model AI kecil tapi hebat: kapan 1B parameter cukup
-- [ ] AI untuk code review: setup otomatis di GitHub Actions
+- [x] AI untuk code review: setup otomatis di GitHub Actions
 - [ ] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
 - [ ] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
 - [ ] Biaya API AI: cara hemat pakai model lokal vs cloud
 - [ ] AI di production: lessons learned menjalankan model sendiri di VPS
+- [ ] Serge dari Hugging Face: code review open source dengan model lokal
+- [ ] API review Copilot Oktober 2026: minta review lewat REST dan GraphQL
+- [ ] AI review untuk GitLab dan Bitbucket: pilihan tool di luar GitHub
+- [ ] Mengukur kualitas AI code review: addressing rate dan metrik yang jujur
+- [ ] AI code review dan keamanan data: apa yang boleh dikirim ke model
+- [ ] File instruksi review: copilot-instructions, AGENTS.md, dan aturan tim
+- [ ] AI review di IDE vs di pull request: kapan pakai yang mana
+- [ ] Biaya AI code review 2026: AI credits, Actions minutes, dan kontrol anggaran
+- [ ] AI reviewer untuk repo monorepo: konteks penuh vs diff saja
+- [ ] AI review untuk tim kecil Indonesia: setup gratis untuk repo open source
