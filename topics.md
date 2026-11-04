@@ -29,7 +29,7 @@
 - [x] Cara deploy aplikasi Next.js ke VPS dengan PM2
 
 ## PostgreSQL / Database
-- [ ] PostgreSQL vs MySQL: mana yang cocok untuk project kamu
+- [x] PostgreSQL vs MySQL: mana yang cocok untuk project kamu
 - [ ] Cara install PostgreSQL di Ubuntu dan Windows
 - [ ] Index di PostgreSQL: bikin query 100x lebih cepat
 - [ ] JOIN di SQL: INNER, LEFT, RIGHT dengan contoh mudah
