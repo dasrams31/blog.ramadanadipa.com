@@ -80,7 +80,7 @@
 - [x] Berita AI minggu ini: rangkuman yang penting buat developer
 - [x] Model AI kecil tapi hebat: kapan 1B parameter cukup
 - [x] AI untuk code review: setup otomatis di GitHub Actions
-- [ ] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
+- [x] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
 - [ ] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
 - [ ] Biaya API AI: cara hemat pakai model lokal vs cloud
 - [ ] AI di production: lessons learned menjalankan model sendiri di VPS
