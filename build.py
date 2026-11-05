@@ -229,6 +229,18 @@ def build_post(p, posts):
                        p["url"], jsonld_article(p))
     render_page(f"posts/{p['slug']}/index.html", head, body)
 
+def build_archive(posts):
+    rows = []
+    for p in posts:
+        rows.append(
+            f'  <li><h3><a href="/posts/{p["slug"]}/">{html.escape(p["title"])}</a></h3>'
+            f'<span class="meta">{id_date(p["date"])} · {p["minutes"]} mnt baca</span></li>')
+    body = tpl("archive_body.html", count=str(len(posts)), rows="\n".join(rows))
+    head = head_common("Arsip Artikel · Blog Rama Danadipa",
+                       "Semua artikel Blog Rama Danadipa dari yang terbaru sampai yang paling lama.",
+                       f"{SITE}/arsip/")
+    render_page("arsip/index.html", head, body)
+
 def build_tags(posts):
     by_tag = {}
     for p in posts:
@@ -243,7 +255,8 @@ def build_tags(posts):
         render_page(f"tags/{tag_slug(t)}/index.html", head, body)
 
 def build_sitemap(posts):
-    urls = [(SITE + "/", date.today().isoformat())]
+    urls = [(SITE + "/", date.today().isoformat()),
+            (f"{SITE}/arsip/", date.today().isoformat())]
     for p in posts:
         urls.append((p["url"], p["date"]))
     for t in {x for p in posts for x in p["tags"]}:
@@ -293,6 +306,7 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     shutil.copytree(STATIC, os.path.join(OUT, "assets"))
     build_index(posts)
+    build_archive(posts)
     for p in posts:
         build_post(p, posts)
     build_tags(posts)

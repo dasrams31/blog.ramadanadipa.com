@@ -218,3 +218,14 @@ img{max-width:100%;height:auto}
   /* footer mark smaller */
   .foot-mark{font-size:clamp(2rem,11vw,3rem)}
 }
+
+/* archive list: numbered, newest first */
+.more{margin-top:1.8rem;text-align:center}
+.archive-list{list-style:none;margin:1.2rem 0 3rem;padding:0;counter-reset:arsip}
+.archive-list li{counter-increment:arsip;display:flex;align-items:baseline;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.archive-list li::before{content:counter(arsip, decimal-leading-zero);font-family:var(--font-display);font-weight:700;color:var(--aka);font-size:.95rem;min-width:2.2rem}
+.archive-list h3{font-size:1.05rem;line-height:1.4}
+.archive-list h3 a{text-decoration:none}
+.archive-list h3 a:hover{color:var(--aka)}
+.archive-list .meta{margin-left:auto;white-space:nowrap;font-size:.78rem;color:var(--hai);letter-spacing:.04em}
+@media(max-width:600px){.archive-list li{flex-wrap:wrap;gap:.3rem}.archive-list .meta{margin-left:2.2rem}}
