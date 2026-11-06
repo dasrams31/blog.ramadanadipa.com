@@ -5,6 +5,9 @@
       <div class="chips">{{tags}}</div>
       <h1>{{title}}</h1>
       <p class="post-meta">Oleh <strong>Rama Danadipa</strong> · {{date}} · {{minutes}} menit baca · <span class="views" data-views-for="{{slug}}">👁 <b>–</b> views</span></p>
+      <div class="like-row">
+        <button id="like-btn" class="like-btn" type="button" aria-pressed="false"><span class="like-heart">♥</span> <b id="like-count">–</b> Suka</button>
+      </div>
       <span id="post-slug" data-slug="{{slug}}" hidden></span>
     </header>
     {{toc}}
@@ -20,5 +23,74 @@
       </div>
     </div>
   </article>
+  <section class="comments" id="comments">
+    <h2>Komentar</h2>
+    <form id="comment-form">
+      <input id="comment-name" type="text" maxlength="40" placeholder="Nama kamu" autocomplete="name" required>
+      <textarea id="comment-body" maxlength="500" rows="3" placeholder="Tulis komentar..." required></textarea>
+      <button class="btn" type="submit">Kirim Komentar</button>
+      <p class="comment-note" id="comment-note" hidden></p>
+    </form>
+    <p class="comment-count" id="comment-count"></p>
+    <ul id="comment-list" class="comment-list"></ul>
+    <p id="comment-empty" class="comment-empty">Belum ada komentar. Jadilah yang pertama!</p>
+  </section>
 {{related}}
 </div>
+<script>
+/* like + komentar: API blog sendiri, tanpa reload */
+(function(){
+var mark=document.getElementById('post-slug');if(!mark)return;
+var slug=mark.dataset.slug;
+var LS='blog-liked-'+slug;
+function fmt(n){if(n>=1e6)return (n/1e6).toFixed(1).replace('.',',')+' jt';
+if(n>=1e3)return (n/1e3).toFixed(1).replace('.',',')+' rb';return ''+n;}
+/* --- like --- */
+var btn=document.getElementById('like-btn'),cnt=document.getElementById('like-count');
+function paintLike(n,liked){cnt.textContent=fmt(n);btn.classList.toggle('liked',!!liked);
+btn.setAttribute('aria-pressed',liked?'true':'false');}
+try{if(localStorage.getItem(LS)==='1')paintLike(0,true);}catch(e){}
+fetch('/api/likes?slug='+encodeURIComponent(slug)).then(function(r){return r.json();})
+.then(function(d){var n=d[slug]||0;var liked=false;try{liked=localStorage.getItem(LS)==='1';}catch(e){}
+paintLike(n,liked);}).catch(function(){});
+btn.addEventListener('click',function(){
+fetch('/api/like',{method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({slug:slug})}).then(function(r){return r.json();})
+.then(function(d){if(d.likes==null)return;paintLike(d.likes,d.liked);
+try{if(d.liked)localStorage.setItem(LS,'1');else localStorage.removeItem(LS);}catch(e){}})
+.catch(function(){});});
+/* --- komentar --- */
+var list=document.getElementById('comment-list'),empty=document.getElementById('comment-empty'),
+ccount=document.getElementById('comment-count'),form=document.getElementById('comment-form'),
+note=document.getElementById('comment-note');
+function showNote(msg){note.textContent=msg;note.hidden=false;}
+function fmtDate(iso){try{return new Date(iso).toLocaleString('id-ID',
+{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch(e){return '';}}
+function renderOne(c,prepend){
+var li=document.createElement('li');
+var head=document.createElement('p');head.className='comment-head';
+var nm=document.createElement('strong');nm.textContent=c.name;head.appendChild(nm);
+var dt=document.createElement('span');dt.className='comment-date';dt.textContent=' · '+fmtDate(c.created_at);
+head.appendChild(dt);li.appendChild(head);
+var bd=document.createElement('p');bd.className='comment-body';bd.textContent=c.body;li.appendChild(bd);
+if(prepend&&list.firstChild)list.insertBefore(li,list.firstChild);else list.appendChild(li);}
+function refreshCount(){var n=list.children.length;ccount.textContent=n?(n+' komentar'):'';
+empty.hidden=n>0;}
+fetch('/api/comments?slug='+encodeURIComponent(slug)).then(function(r){return r.json();})
+.then(function(d){(d.comments||[]).forEach(function(c){renderOne(c,false);});refreshCount();})
+.catch(function(){});
+form.addEventListener('submit',function(e){
+e.preventDefault();
+var name=document.getElementById('comment-name').value.trim(),
+body=document.getElementById('comment-body').value.trim();
+if(!name||!body){showNote('Nama dan komentar wajib diisi.');return;}
+note.hidden=true;
+fetch('/api/comments',{method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({slug:slug,name:name,body:body})}).then(function(r){return r.json().then(function(d){
+if(!r.ok)throw new Error(d.error||'gagal kirim');return d;});})
+.then(function(d){renderOne(d.comment,true);refreshCount();
+document.getElementById('comment-body').value='';
+showNote('Komentar terkirim. Terima kasih!');})
+.catch(function(err){showNote(err.message||'Gagal mengirim komentar. Coba lagi.');});});
+})();
+</script>
