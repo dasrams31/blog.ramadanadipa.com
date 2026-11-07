@@ -81,7 +81,7 @@
 - [x] Model AI kecil tapi hebat: kapan 1B parameter cukup
 - [x] AI untuk code review: setup otomatis di GitHub Actions
 - [x] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
-- [ ] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
+- [x] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
 - [ ] Biaya API AI: cara hemat pakai model lokal vs cloud
 - [ ] AI di production: lessons learned menjalankan model sendiri di VPS
 - [ ] Serge dari Hugging Face: code review open source dengan model lokal
