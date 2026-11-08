@@ -31,7 +31,7 @@
 ## PostgreSQL / Database
 - [x] PostgreSQL vs MySQL: mana yang cocok untuk project kamu
 - [x] Cara install PostgreSQL di Ubuntu dan Windows
-- [ ] Index di PostgreSQL: bikin query 100x lebih cepat
+- [x] Index di PostgreSQL: bikin query 100x lebih cepat
 - [ ] JOIN di SQL: INNER, LEFT, RIGHT dengan contoh mudah
 - [ ] Cara backup dan restore database PostgreSQL otomatis
 - [ ] Foreign key dan relasi tabel: konsep database untuk pemula
