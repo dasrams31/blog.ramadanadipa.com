@@ -82,7 +82,7 @@
 - [x] AI untuk code review: setup otomatis di GitHub Actions
 - [x] Bikin REST API AI sendiri: bungkus model lokal jadi OpenAI-compatible
 - [x] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
-- [ ] Biaya API AI: cara hemat pakai model lokal vs cloud
+- [x] Biaya API AI: cara hemat pakai model lokal vs cloud
 - [ ] AI di production: lessons learned menjalankan model sendiri di VPS
 - [ ] Serge dari Hugging Face: code review open source dengan model lokal
 - [ ] API review Copilot Oktober 2026: minta review lewat REST dan GraphQL
