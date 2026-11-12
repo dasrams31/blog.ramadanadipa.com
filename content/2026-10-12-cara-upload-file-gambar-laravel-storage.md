@@ -1,6 +1,7 @@
 ---
 title: Cara Upload File dan Gambar di Laravel: Panduan Lengkap
 description: Bingung upload file di Laravel? Panduan lengkap storage, symlink, validasi, dan contoh kode nyata. Dari form HTML sampai file tampil di browser.
+cover: /assets/img/covers/cara-upload-file-gambar-laravel-storage.jpg
 date: 2026-10-12
 tags: [laravel, php, upload-file, storage]
 faq:

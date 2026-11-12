@@ -1,6 +1,7 @@
 ---
 title: Berita AI Minggu Ini: GPT-6.1 Terra, Genie 4, Gemini Carbon
 description: Minggu ini OpenAI merilis GPT-6.1 Terra, Google mengumumkan Genie 4 dan Gemini 4 Carbon, Nvidia membuka model transkripsi. Ringkasan dan artinya buat developer.
+cover: /assets/img/covers/berita-ai-minggu-ini.jpg
 date: 2026-10-29
 tags: [ai, berita-ai, openai, google, developer]
 faq:

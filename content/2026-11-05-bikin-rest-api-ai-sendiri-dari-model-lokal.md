@@ -1,6 +1,7 @@
 ---
 title: Bikin REST API AI Sendiri dari Model Lokal
 description: Bungkus model lokal jadi REST API OpenAI compatible dengan Ollama atau llama-server, tambah auth di Laravel, dan panggil dari kode yang sama seperti OpenAI.
+cover: /assets/img/covers/bikin-rest-api-ai-sendiri-dari-model-lokal.jpg
 date: 2026-11-05
 tags: [ai, llm-lokal, openai-compatible, laravel]
 faq:

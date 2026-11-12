@@ -1,6 +1,7 @@
 ---
 title: Index di PostgreSQL Bikin Query 100x Lebih Cepat
 description: Panduan index di PostgreSQL untuk pemula. Pahami B-tree, GIN, dan BRIN, lihat bukti EXPLAIN ANALYZE, dan hindari kesalahan yang bikin index malah memperlambat database.
+cover: /assets/img/covers/index-di-postgresql-bikin-query-100x-lebih-cepat.jpg
 date: 2026-11-08
 tags: [postgresql, database, index, sql, performance]
 faq:

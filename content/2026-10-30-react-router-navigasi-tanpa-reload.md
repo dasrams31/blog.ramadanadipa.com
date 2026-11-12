@@ -1,6 +1,7 @@
 ---
 title: React Router: Navigasi Halaman Tanpa Reload
 description: Pindah halaman React tanpa reload itu tugas React Router. Pelajari setup Routes, Link, NavLink, useParams, nested route, dan lazy loading dengan contoh lengkap.
+cover: /assets/img/covers/react-router-navigasi-tanpa-reload.jpg
 date: 2026-10-30
 tags: [react, javascript, react-router, frontend]
 faq:

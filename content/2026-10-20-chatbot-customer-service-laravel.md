@@ -1,6 +1,7 @@
 ---
 title: Chatbot Customer Service di Laravel: Bikin CS AI Sendiri
 description: Tutorial bikin chatbot customer service di Laravel: database percakapan, knowledge base FAQ, widget chat, eskalasi ke manusia, plus data tren CS AI 2026.
+cover: /assets/img/covers/chatbot-customer-service-laravel.jpg
 date: 2026-10-20
 tags: [laravel, ai, chatbot, php]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Form Terkontrol di React: Cara Kerja dan Contoh Lengkap
 description: Form React yang inputnya tak terkendali bikin validasi berantakan. Pelajari controlled form: value, onChange, dan contoh form lengkap yang siap dipakai.
+cover: /assets/img/covers/cara-membuat-form-terkontrol-controlled-form-di-react.jpg
 date: 2026-10-28
 tags: [react, javascript, form, frontend]
 faq:

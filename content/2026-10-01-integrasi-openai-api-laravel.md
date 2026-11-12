@@ -1,6 +1,7 @@
 ---
 title: Cara Integrasi OpenAI API di Aplikasi Laravel (Lengkap dengan Contoh)
 description: Tutorial integrasi OpenAI API di Laravel: setup API key, kirim prompt, streaming response, hemat biaya dengan caching, dan contoh fitur ringkasan teks otomatis.
+cover: /assets/img/covers/integrasi-openai-api-laravel.jpg
 date: 2026-10-01
 tags: [laravel, ai, api, php]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: RAG Python: Chatbot yang Bisa Baca Dokumen Kamu Sendiri
 description: Pelajari RAG dari nol: bikin chatbot baca dokumen sendiri pakai Python, pilihan embedding model lokal terbaik 2026, dan jebakan umum yang wajib dihindari.
+cover: /assets/img/covers/rag-sederhana-chatbot-baca-dokumen-sendiri-python.jpg
 date: 2026-10-15
 tags: [rag, python, ai, embedding, chatbot]
 faq:

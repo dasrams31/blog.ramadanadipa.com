@@ -77,6 +77,8 @@ img{max-width:100%;height:auto}
 .hero-post h2 a{text-decoration:none}
 .hero-post h2 a:hover{color:var(--aka)}
 .hero-post .lede{margin-bottom:1.4rem}
+.hero-cover{display:block;margin:-1rem -1rem 1.2rem}
+.hero-cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
 .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--aka);color:#fff;
   text-decoration:none;padding:.9rem 1.7rem;font-size:.82rem;letter-spacing:.18em;font-weight:700;
   border-radius:4px}
@@ -99,6 +101,8 @@ img{max-width:100%;height:auto}
 .card h3 a{text-decoration:none}
 .card h3 a:hover{color:var(--aka)}
 .card p{font-size:.88rem;color:var(--paper-dim);flex:1}
+.card-cover{display:block;margin:-1.5rem -1.5rem 0}
+.card-cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .chips{display:flex;flex-wrap:wrap;gap:.45rem}
 .chip{font-size:.68rem;letter-spacing:.08em;background:#1d1d23;padding:.3rem .7rem;border-radius:20px;color:var(--paper-dim)}
 .chip.link{text-decoration:none}
@@ -112,6 +116,8 @@ img{max-width:100%;height:auto}
 .crumbs span{margin:0 .5rem}
 .post-wrap{max-width:780px}
 .post-head{margin-bottom:2rem}
+.post-cover{margin:0 0 2rem}
+.post-cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
 .post-head h1{font-family:var(--font-display);font-size:clamp(1.9rem,5vw,2.9rem);line-height:1.25;
   margin:1rem 0;letter-spacing:-.01em}
 .post-meta{font-size:.82rem;color:var(--hai);letter-spacing:.06em}

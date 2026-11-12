@@ -1,6 +1,7 @@
 ---
 title: Fine-tuning vs RAG vs Prompt: Kapan Pakai yang Mana
 description: Prompt, RAG, atau fine-tuning? Pahami bedanya lewat kasus nyata dan contoh kode Python, supaya kamu tidak buang biaya training yang tidak perlu.
+cover: /assets/img/covers/fine-tuning-vs-rag-vs-prompt-kapan-pakai-yang-mana.jpg
 date: 2026-10-27
 tags: [ai, rag, fine-tuning, prompt-engineering, python]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Cara Backup dan Restore Database PostgreSQL Otomatis
 description: Panduan lengkap backup dan restore database PostgreSQL otomatis dengan pg_dump, pg_restore, dan cron. Lengkap dengan script siap pakai dan jadwal harian.
+cover: /assets/img/covers/cara-backup-dan-restore-database-postgresql-otomatis.jpg
 date: 2026-11-11
 tags: [postgresql, database, backup, vps, devops]
 faq:

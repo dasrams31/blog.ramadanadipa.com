@@ -1,6 +1,7 @@
 ---
 title: Cara Install PostgreSQL di Ubuntu dan Windows Lengkap
 description: Panduan install PostgreSQL di Ubuntu dan Windows langkah demi langkah, tambah user, buat database pertama, atur password, sampai koneksi ke Laravel dan pgAdmin.
+cover: /assets/img/covers/cara-install-postgresql-di-ubuntu-dan-windows.jpg
 date: 2026-11-06
 tags: [postgresql, database, ubuntu, windows, laravel]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Routing Laravel: GET, POST, Parameter & Route Group
 description: Panduan routing Laravel: bedakan GET dan POST, pakai route parameter dan route group, plus cara umum yang bikin error dan cara memperbaikinya.
+cover: /assets/img/covers/routing-laravel-get-post-route-parameter-route-group.jpg
 date: 2026-10-05
 tags: [laravel, php, routing, tutorial]
 faq:

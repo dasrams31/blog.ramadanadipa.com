@@ -1,6 +1,7 @@
 ---
 title: AI Multimodal 2026: Teks, Gambar, dan Suara Satu Aplikasi
 description: Model AI 2026 sudah baca teks, gambar, video, dan suara dalam satu request. Ini pilihan modelnya, contoh kodenya, dan kapan multimodal benar-benar dibutuhkan.
+cover: /assets/img/covers/tren-ai-multimodal-teks-gambar-suara-satu-aplikasi.jpg
 date: 2026-11-07
 tags: [ai-multimodal, ai, gemini, llm, developer]
 faq:

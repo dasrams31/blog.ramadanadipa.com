@@ -1,6 +1,7 @@
 ---
 title: Biaya API AI 2026: Model Lokal vs Cloud, Mana Lebih Hemat?
 description: Harga API AI November 2026, dari $0,10 sampai $50 per juta token. Hitung titik impas model lokal vs cloud, plus contoh kode router hemat biaya.
+cover: /assets/img/covers/biaya-api-ai-model-lokal-vs-cloud-cara-hemat.jpg
 date: 2026-11-10
 tags: [biaya-api-ai, llm, model-lokal, cloud, developer]
 faq:

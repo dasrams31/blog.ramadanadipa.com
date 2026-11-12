@@ -1,6 +1,7 @@
 ---
 title: Kirim Email di Laravel: Mailtrap, SMTP Gmail & Queue
 description: Pelajari cara kirim email di Laravel: setup Mailtrap untuk testing, bikin Mailable, konfigurasi SMTP Gmail production, dan hindari kesalahan umum pemula.
+cover: /assets/img/covers/kirim-email-di-laravel-mailtrap-smtp-gmail.jpg
 date: 2026-10-18
 tags: [laravel, php, email, smtp]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Pagination dan Search di Laravel Blade: Tutorial Lengkap
 description: Tutorial pagination dan search Laravel Blade: setup paginate, form search GET, withQueryString agar filter tidak hilang, custom tampilan, dan kesalahan umum.
+cover: /assets/img/covers/pagination-dan-search-sederhana-di-laravel-blade.jpg
 date: 2026-10-21
 tags: [laravel, php, blade, mysql]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Cara Fetch Data API di React dengan useEffect dan Axios
 description: Tutorial fetch data API di React dengan useEffect dan Axios: loading state, error handling, cleanup dengan AbortController, custom hook, dan interceptors. Lengkap dengan kode nyata.
+cover: /assets/img/covers/cara-fetch-data-api-di-react-useeffect-axios.jpg
 date: 2026-10-23
 tags: [react, axios, useeffect, api]
 faq:

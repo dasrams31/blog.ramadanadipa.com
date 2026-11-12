@@ -1,6 +1,7 @@
 ---
 title: AI Code Review Otomatis di GitHub Actions: Setup Praktis
 description: Setup AI code review otomatis di GitHub Actions: Copilot, CodeRabbit, dan workflow rakitan sendiri dengan contoh YAML, Python, dan cara cegah spam komentar.
+cover: /assets/img/covers/ai-code-review-otomatis-di-github-actions.jpg
 date: 2026-11-03
 tags: [ai, github-actions, code-review, copilot]
 faq:

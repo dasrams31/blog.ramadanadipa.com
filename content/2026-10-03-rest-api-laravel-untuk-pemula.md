@@ -1,6 +1,7 @@
 ---
 title: Cara Membuat REST API dengan Laravel 12 untuk Pemula
 description: Panduan lengkap membuat REST API dengan Laravel 12: routing, controller, resource, validasi, dan testing dengan contoh kode nyata langkah demi langkah.
+cover: /assets/img/covers/rest-api-laravel-untuk-pemula.jpg
 date: 2026-10-03
 tags: [laravel, php, rest api, backend]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Jalankan LLM Lokal di VPS: Llama, SmolLM2, Qwen
 description: Jalankan LLM lokal di VPS sebagai API 24/7: hitung RAM, pilih Llama/SmolLM2/Qwen, install llama.cpp, pasang systemd, plus update model terbaru Oktober 2026.
+cover: /assets/img/covers/menjalankan-llm-lokal-di-vps.jpg
 date: 2026-10-10
 tags: [ai, llm, vps, tutorial]
 faq:

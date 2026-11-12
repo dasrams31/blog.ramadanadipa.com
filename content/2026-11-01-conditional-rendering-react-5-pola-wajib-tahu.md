@@ -1,6 +1,7 @@
 ---
 title: Conditional Rendering di React: 5 Pola yang Wajib Tahu
 description: 5 pola conditional rendering di React: early return, ternary, operator &&, switch, dan object lookup, lengkap contoh kode dan jebakan sering menjebak pemula.
+cover: /assets/img/covers/conditional-rendering-react-5-pola-wajib-tahu.jpg
 date: 2026-11-01
 tags: [react, javascript, frontend, jsx]
 faq:

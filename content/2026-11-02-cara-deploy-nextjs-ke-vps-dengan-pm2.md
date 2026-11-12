@@ -1,6 +1,7 @@
 ---
 title: Cara Deploy Next.js ke VPS dengan PM2, Langkah Demi Langkah
 description: Deploy Next.js ke VPS dengan PM2 dan Nginx: build production, ecosystem config, reverse proxy, dan HTTPS gratis. Tetap jalan setelah reboot.
+cover: /assets/img/covers/cara-deploy-nextjs-ke-vps-dengan-pm2.jpg
 date: 2026-11-02
 tags: [nextjs, pm2, nginx, vps, deployment]
 faq:

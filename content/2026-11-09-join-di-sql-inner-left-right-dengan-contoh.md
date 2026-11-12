@@ -1,6 +1,7 @@
 ---
 title: "JOIN di SQL: INNER, LEFT, RIGHT dengan Contoh"
 description: "Pelajari JOIN di SQL dari nol: INNER JOIN, LEFT JOIN, dan RIGHT JOIN dengan contoh nyata tabel users dan orders di PostgreSQL. Cocok untuk pemula."
+cover: /assets/img/covers/join-di-sql-inner-left-right-dengan-contoh.jpg
 date: 2026-11-09
 tags: [SQL, PostgreSQL, database]
 faq:

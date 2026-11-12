@@ -1,6 +1,7 @@
 ---
 title: Next.js App Router vs Pages Router: Mana Dipelajari Dulu?
 description: Bingung mulai belajar Next.js dari App Router atau Pages Router? Ini perbandingan struktur, data fetching, dan Server Component plus rekomendasi untuk pemula.
+cover: /assets/img/covers/nextjs-app-router-vs-pages-router.jpg
 date: 2026-10-26
 tags: [nextjs, react, app-router, javascript]
 faq:

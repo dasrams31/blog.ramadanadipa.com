@@ -1,6 +1,7 @@
 ---
 title: Eloquent One to Many Laravel: Contoh Relasi yang Nyata
 description: Pelajari relasi Eloquent one to many di Laravel dengan contoh nyata: setup migrasi, definisi belongsTo dan hasMany, eager loading, plus kesalahan umum pemula.
+cover: /assets/img/covers/eloquent-relationship-laravel-one-to-many-contoh-nyata.jpg
 date: 2026-10-06
 tags: [laravel, php, eloquent, database]
 faq:

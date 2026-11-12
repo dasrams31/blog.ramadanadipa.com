@@ -1,6 +1,7 @@
 ---
 title: PostgreSQL vs MySQL: Mana yang Cocok untuk Project Kamu?
 description: PostgreSQL atau MySQL untuk project Laravel kamu? Perbandingan jujur soal fitur, JSON, performa, dan kapan masing-masing cocok, plus contoh SQL nyata.
+cover: /assets/img/covers/postgresql-vs-mysql-mana-yang-cocok-untuk-project-kamu.jpg
 date: 2026-11-04
 tags: [postgresql, mysql, database, laravel]
 faq:

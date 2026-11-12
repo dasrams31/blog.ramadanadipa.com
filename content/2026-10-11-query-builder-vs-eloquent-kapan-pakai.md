@@ -1,6 +1,7 @@
 ---
 title: Query Builder vs Eloquent Laravel: Kapan Pakai yang Mana
 description: Bingung pilih query builder atau Eloquent di Laravel? Simak perbandingan lengkap dengan contoh kode nyata, kapan masing-masing unggul, dan kesalahan umum pemula.
+cover: /assets/img/covers/query-builder-vs-eloquent-kapan-pakai.jpg
 date: 2026-10-11
 tags: [laravel, php, eloquent, query-builder]
 faq:

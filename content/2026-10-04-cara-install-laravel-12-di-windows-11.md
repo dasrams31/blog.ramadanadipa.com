@@ -1,6 +1,7 @@
 ---
 title: Cara Install Laravel 12 di Windows 11: Panduan Lengkap
 description: Panduan lengkap install Laravel 12 di Windows 11: siapkan PHP 8.2+, Composer, dan database, lalu buat project pertama dan jalankan tanpa error.
+cover: /assets/img/covers/cara-install-laravel-12-di-windows-11.jpg
 date: 2026-10-04
 tags: [laravel, php, windows, tutorial]
 faq:

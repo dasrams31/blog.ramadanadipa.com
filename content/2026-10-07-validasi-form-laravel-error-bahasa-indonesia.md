@@ -1,6 +1,7 @@
 ---
 title: Validasi Form Laravel: Cara Mudah & Error Bahasa Indonesia
 description: Panduan validasi form Laravel untuk pemula: aturan validasi, tampilkan error di Blade, pesan error Bahasa Indonesia, dan Form Request dengan contoh kode.
+cover: /assets/img/covers/validasi-form-laravel-error-bahasa-indonesia.jpg
 date: 2026-10-07
 tags: [laravel, php, validasi, tutorial]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: Seeder dan Factory Laravel: Isi Database Dummy Otomatis
 description: Pelajari seeder dan factory Laravel untuk isi database dummy otomatis. Contoh kode nyata, faker Indonesia, kesalahan umum pemula, dan langkah praktis.
+cover: /assets/img/covers/seeder-dan-factory-laravel-isi-database-dummy-otomatis.jpg
 date: 2026-10-16
 tags: [laravel, php, database, faker]
 faq:

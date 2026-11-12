@@ -1,6 +1,7 @@
 ---
 title: Model AI Open Source Terbaik 2026: Pilihan Buat Developer
 description: Tren model AI open source 2026: Qwen3, DeepSeek V4, Kimi, Gemma 4, sampai LLM lokal kecil seperti SmolLM dan Llama. Plus panduan nyata menjalankannya di laptop atau VPS.
+cover: /assets/img/covers/tren-model-ai-open-source-2026-untuk-developer.jpg
 date: 2026-10-08
 tags: [ai, open-source, llm, vps, tutorial]
 faq:

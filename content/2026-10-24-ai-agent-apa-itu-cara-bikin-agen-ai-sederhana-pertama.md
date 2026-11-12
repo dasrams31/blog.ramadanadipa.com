@@ -1,6 +1,7 @@
 ---
 title: AI Agent: Apa Itu dan Cara Bikin Agen AI Pertamamu
 description: AI agent bukan chatbot biasa: pahami cara kerja loop think-act-observe, tren 2026 seperti MCP dan framework populer, lalu bikin agen pertamamu dengan Python dalam 15 menit.
+cover: /assets/img/covers/ai-agent-apa-itu-cara-bikin-agen-ai-sederhana-pertama.jpg
 date: 2026-10-24
 tags: [ai, ai-agent, python, tutorial]
 faq:

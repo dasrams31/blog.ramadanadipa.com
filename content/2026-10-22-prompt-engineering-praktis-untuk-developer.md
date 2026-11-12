@@ -1,6 +1,7 @@
 ---
 title: Prompt Engineering Praktis untuk Developer: Contoh Langsung
 description: Prompt engineering praktis untuk developer: contoh system prompt, struktur prompt XML, prompt chaining, dan cara evaluasi hasil AI dengan kode nyata yang bisa langsung dicoba.
+cover: /assets/img/covers/prompt-engineering-praktis-untuk-developer.jpg
 date: 2026-10-22
 tags: [prompt engineering, ai, developer]
 faq:

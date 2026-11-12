@@ -1,6 +1,7 @@
 ---
 title: Laravel Queue dan Jobs: Kirim Email Tanpa Bikin Web Lemot
 description: Pelajari cara kerja Laravel Queue dan Jobs: kirim email, notifikasi, dan proses berat di background agar aplikasi tetap cepat. Contoh kode lengkap untuk pemula.
+cover: /assets/img/covers/laravel-queue-jobs-kirim-email-tanpa-bikin-web-lemot.jpg
 date: 2026-10-19
 tags: [laravel, php, queue, jobs]
 faq:

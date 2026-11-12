@@ -1,6 +1,7 @@
 ---
 title: Middleware Laravel: Cara Batasi Akses Admin dan User
 description: Pelajari middleware Laravel untuk membatasi akses halaman admin. Contoh kode nyata, kesalahan umum pemula, dan langkah praktis yang bisa langsung kamu coba.
+cover: /assets/img/covers/laravel-middleware-akses-admin-user.jpg
 date: 2026-10-14
 tags: [laravel, php, middleware, authentication]
 faq:

@@ -1,6 +1,7 @@
 ---
 title: 20 Ide SaaS Trend 2026: Peluang Bisnis Software
 description: 20 ide bisnis software yang naik daun di 2026: tooling AI, vertical SaaS, dan micro-SaaS Indonesia, plus data pasar terkini dan cara validasi ide.
+cover: /assets/img/covers/20-ide-saas-trend-2026-peluang-bisnis-software.jpg
 date: 2026-10-13
 tags: [saas, ai, startup, bisnis, developer]
 faq:

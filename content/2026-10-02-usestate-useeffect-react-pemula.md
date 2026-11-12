@@ -1,6 +1,7 @@
 ---
 title: "useState dan useEffect di React: Penjelasan untuk Pemula dengan Contoh Nyata"
 description: Bingung dengan useState dan useEffect di React? Panduan pemula dengan contoh kode nyata: counter, fetch data API, dan kesalahan umum yang wajib dihindari.
+cover: /assets/img/covers/usestate-useeffect-react-pemula.jpg
 date: 2026-10-02
 tags: [react, javascript, frontend]
 faq:

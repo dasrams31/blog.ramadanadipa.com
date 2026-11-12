@@ -1,6 +1,7 @@
 ---
 title: Copilot vs Cursor 2026: Pilih AI Coding Assistant Terbaik
 description: Perbandingan Copilot, Cursor, Claude Code, dan alternatif gratis 2026. Harga terbaru, kelebihan, contoh setup nyata, plus kesalahan umum yang bikin boros.
+cover: /assets/img/covers/perbandingan-ai-coding-assistant-copilot-cursor-gratis.jpg
 date: 2026-10-17
 tags: [ai, coding, developer, tools]
 faq:

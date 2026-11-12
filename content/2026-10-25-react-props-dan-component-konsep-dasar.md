@@ -1,6 +1,7 @@
 ---
 title: React Props dan Component: Konsep Dasar dengan Contoh
 description: Tutorial React props dan component untuk pemula: kirim data antar komponen, destructuring props, default props, children, plus kesalahan umum pemula.
+cover: /assets/img/covers/react-props-dan-component-konsep-dasar.jpg
 date: 2026-10-25
 tags: [react, props, component, javascript]
 faq:

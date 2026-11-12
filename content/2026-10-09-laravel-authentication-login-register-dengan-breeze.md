@@ -1,6 +1,7 @@
 ---
 title: Laravel Authentication: Login & Register dengan Breeze
 description: Panduan Laravel Breeze untuk pemula: install, alur login & register, email verification, password reset, plus kesalahan umum dan cara memperbaikinya dengan contoh kode.
+cover: /assets/img/covers/laravel-authentication-login-register-dengan-breeze.jpg
 date: 2026-10-09
 tags: [laravel, php, authentication, breeze]
 faq:

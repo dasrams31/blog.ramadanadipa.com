@@ -49,6 +49,7 @@ def parse_post(path):
         "slug": slug, "date": meta.get("date", d),
         "title": meta.get("title", slug.replace("-", " ").title()),
         "description": meta.get("description", ""),
+        "cover": meta.get("cover", ""),
         "tags": [t.lower() for t in tags], "faqs": faqs,
         "draft": str(meta.get("draft", "")).lower() == "true",
         "body": body, "minutes": max(1, round(words / 200)),
@@ -123,6 +124,21 @@ def tpl(name, **kw):
         s = s.replace("{{" + k + "}}", v)
     return s
 
+def cover_url(p):
+    """Absolute cover URL, or '' when the post has no cover."""
+    c = p.get("cover", "")
+    if not c:
+        return ""
+    return c if c.startswith("http") else SITE + c
+
+def cover_img(p, cls=""):
+    c = p.get("cover", "")
+    if not c:
+        return ""
+    alt = html.escape(p["title"])
+    cls_attr = f' class="{cls}"' if cls else ""
+    return f'<img src="{html.escape(c)}" alt="{alt}" loading="lazy"{cls_attr}>'
+
 def jsonld_article(p):
     d = {
         "@context": "https://schema.org", "@type": "BlogPosting",
@@ -132,6 +148,8 @@ def jsonld_article(p):
         "publisher": {"@type": "Person", "name": AUTHOR},
         "mainEntityOfPage": p["url"], "inLanguage": "id-ID",
     }
+    if cover_url(p):
+        d["image"] = cover_url(p)
     parts = [json.dumps(d, ensure_ascii=False)]
     if p["faqs"]:
         parts.append(json.dumps({
@@ -142,11 +160,16 @@ def jsonld_article(p):
         }, ensure_ascii=False))
     return "\n".join(f'<script type="application/ld+json">{x}</script>' for x in parts)
 
-def head_common(title, desc, url, jsonld=""):
+def head_common(title, desc, url, jsonld="", og_image=""):
     # cache-buster: versi CSS dari mtime file, biar update langsung kelihatan
     css_v = int(os.path.getmtime(os.path.join(STATIC, "css/style.css")))
+    og = ""
+    if og_image:
+        u = html.escape(og_image)
+        og = (f'<meta property="og:image" content="{u}">\n'
+              f'<meta name="twitter:image" content="{u}">')
     return tpl("head.html", title=html.escape(title), description=html.escape(desc),
-               url=url, jsonld=jsonld, css_v=str(css_v))
+               url=url, jsonld=jsonld, css_v=str(css_v), og_image=og)
 
 def render_page(filename, head, body_html):
     page = tpl("base.html", head=head, content=body_html, year=str(date.today().year))
@@ -166,8 +189,12 @@ def tag_slug(t):
 # ── page generators (continued) ──────────────────────
 def card(p):
     tags = "".join(f'<a class="chip link" href="/tags/{tag_slug(t)}/">{html.escape(t)}</a>' for t in p["tags"][:3])
+    cover = ""
+    if p.get("cover"):
+        cover = (f'<a class="card-cover" href="/posts/{p["slug"]}/" aria-hidden="true" tabindex="-1">'
+                 f'{cover_img(p)}</a>')
     return f"""<article class="card">
-  <div class="card-top"><span class="card-date">{id_date(p['date'])}</span><span class="card-views views" data-views-for="{p['slug']}">👁 <b>–</b></span><span class="card-read">{p['minutes']} mnt baca</span></div>
+{cover}  <div class="card-top"><span class="card-date">{id_date(p['date'])}</span><span class="card-views views" data-views-for="{p['slug']}">👁 <b>–</b></span><span class="card-read">{p['minutes']} mnt baca</span></div>
   <h3><a href="/posts/{p['slug']}/">{html.escape(p['title'])}</a></h3>
   <p>{html.escape(p['description'])}</p>
   <div class="chips">{tags}</div>
@@ -177,8 +204,12 @@ def build_index(posts):
     latest = posts[0] if posts else None
     hero_post = ""
     if latest:
+        hero_cover = ""
+        if latest.get("cover"):
+            hero_cover = (f'<a class="hero-cover" href="/posts/{latest["slug"]}/">'
+                          f'{cover_img(latest)}</a>')
         hero_post = f"""<section class="hero-post">
-  <p class="kicker">最新 · ARTIKEL TERBARU</p>
+{hero_cover}  <p class="kicker">最新 · ARTIKEL TERBARU</p>
   <h2><a href="/posts/{latest['slug']}/">{html.escape(latest['title'])}</a></h2>
   <p class="lede">{html.escape(latest['description'])}</p>
   <p class="hero-meta"><span class="views" data-views-for="{latest['slug']}">👁 <b>–</b> views</span></p>
@@ -221,12 +252,16 @@ def build_post(p, posts):
     for m in re.finditer(r"<h2 id=\"([^\"]+)\">(.+?)</h2>", body_html):
         toc += f'<li><a href="#{m.group(1)}">{m.group(2)}</a></li>'
     toc_html = f'<nav class="toc"><p>DAFTAR ISI</p><ul>{toc}</ul></nav>' if toc else ""
+    cover_html = ""
+    if p.get("cover"):
+        cover_html = f'<figure class="post-cover">{cover_img(p)}</figure>'
     body = tpl("post_body.html", title=html.escape(p["title"]),
                date=id_date(p["date"]), minutes=str(p["minutes"]),
                tags=tags, toc=toc_html, article=body_html,
-               faq=faq_html, related=rel_html, slug=p["slug"])
+               faq=faq_html, related=rel_html, slug=p["slug"],
+               cover=cover_html)
     head = head_common(p["title"] + " · Blog Rama Danadipa", p["description"],
-                       p["url"], jsonld_article(p))
+                       p["url"], jsonld_article(p), cover_url(p))
     render_page(f"posts/{p['slug']}/index.html", head, body)
 
 def build_archive(posts):

@@ -1,6 +1,7 @@
 ---
 title: Model AI 1B Parameter: Kapan Model Kecil Sudah Cukup?
 description: Model AI 1B parameter cukup untuk klasifikasi, ekstraksi data, dan routing. Ini batasnya, bukti benchmarknya, dan cara mengujinya sendiri di sini.
+cover: /assets/img/covers/model-ai-1b-parameter-kapan-sudah-cukup.jpg
 date: 2026-10-31
 tags: [ai, model-ai-kecil, llm, developer]
 faq:
