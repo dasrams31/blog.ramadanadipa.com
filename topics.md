@@ -34,7 +34,7 @@
 - [x] Index di PostgreSQL: bikin query 100x lebih cepat
 - [x] JOIN di SQL: INNER, LEFT, RIGHT dengan contoh mudah
 - [x] Cara backup dan restore database PostgreSQL otomatis
-- [ ] Foreign key dan relasi tabel: konsep database untuk pemula
+- [x] Foreign key dan relasi tabel: konsep database untuk pemula
 - [ ] Query agregat SQL: COUNT, SUM, AVG, GROUP BY
 
 ## Integrasi AI
