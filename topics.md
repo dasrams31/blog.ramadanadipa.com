@@ -84,7 +84,7 @@
 - [x] Tren AI multimodal: teks, gambar, dan suara dalam satu aplikasi
 - [x] Biaya API AI: cara hemat pakai model lokal vs cloud
 - [x] AI di production: lessons learned menjalankan model sendiri di VPS
-- [ ] Serge dari Hugging Face: code review open source dengan model lokal
+- [x] Serge dari Hugging Face: code review open source dengan model lokal
 - [ ] API review Copilot Oktober 2026: minta review lewat REST dan GraphQL
 - [ ] AI review untuk GitLab dan Bitbucket: pilihan tool di luar GitHub
 - [ ] Mengukur kualitas AI code review: addressing rate dan metrik yang jujur
