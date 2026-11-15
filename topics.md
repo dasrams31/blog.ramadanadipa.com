@@ -35,7 +35,7 @@
 - [x] JOIN di SQL: INNER, LEFT, RIGHT dengan contoh mudah
 - [x] Cara backup dan restore database PostgreSQL otomatis
 - [x] Foreign key dan relasi tabel: konsep database untuk pemula
-- [ ] Query agregat SQL: COUNT, SUM, AVG, GROUP BY
+- [x] Query agregat SQL: COUNT, SUM, AVG, GROUP BY
 
 ## Integrasi AI
 - [x] Cara integrasi OpenAI API di aplikasi Laravel
