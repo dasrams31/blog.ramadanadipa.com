@@ -39,7 +39,7 @@
 
 ## Integrasi AI
 - [x] Cara integrasi OpenAI API di aplikasi Laravel
-- [ ] Membuat chatbot sederhana dengan API AI dan JavaScript
+- [x] Membuat chatbot sederhana dengan API AI dan JavaScript
 - [ ] Prompt engineering untuk developer: dapatkan kode lebih akurat
 - [ ] Cara bikin fitur ringkasan teks otomatis dengan AI API
 - [ ] RAG sederhana: bikin AI jawab dari dokumen sendiri
