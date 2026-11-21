@@ -87,7 +87,7 @@
 - [x] Serge dari Hugging Face: code review open source dengan model lokal
 - [x] API review Copilot Oktober 2026: minta review lewat REST dan GraphQL
 - [x] AI review untuk GitLab dan Bitbucket: pilihan tool di luar GitHub
-- [ ] Mengukur kualitas AI code review: addressing rate dan metrik yang jujur
+- [x] Mengukur kualitas AI code review: addressing rate dan metrik yang jujur
 - [ ] AI code review dan keamanan data: apa yang boleh dikirim ke model
 - [ ] File instruksi review: copilot-instructions, AGENTS.md, dan aturan tim
 - [ ] AI review di IDE vs di pull request: kapan pakai yang mana
