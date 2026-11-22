@@ -42,12 +42,14 @@
 - [x] Membuat chatbot sederhana dengan API AI dan JavaScript
 - [x] Prompt engineering untuk developer: dapatkan kode lebih akurat
 - [x] Cara bikin fitur ringkasan teks otomatis dengan AI API
-- [ ] RAG sederhana: bikin AI jawab dari dokumen sendiri
-- [ ] Menghemat biaya API AI: caching, batching, dan pilih model murah
+- [x] RAG sederhana: bikin AI jawab dari dokumen sendiri
+  (sudah terbit 2026-10-15 sebagai "RAG Python: Chatbot yang Bisa Baca Dokumen Kamu Sendiri" — topik sama, dicoret 2026-11-22)
+- [x] Menghemat biaya API AI: caching, batching, dan pilih model murah
+  (sudah terbit 2026-11-10 sebagai "Biaya API AI 2026: Model Lokal vs Cloud" — caching, batch API, dan router hemat sudah dibahas di sana, dicoret 2026-11-22)
 - [ ] Membuat asisten coding: integrasi AI di VS Code workflow
 
 ## VPS / DevOps
-- [ ] Cara deploy website Laravel ke VPS Ubuntu dengan Nginx
+- [x] Cara deploy website Laravel ke VPS Ubuntu dengan Nginx
 - [ ] SSL gratis Let's Encrypt: HTTPS untuk domain sendiri
 - [ ] Docker Compose untuk developer: Laravel + MySQL + Redis
 - [ ] Cara setting SSH key: login VPS tanpa password
