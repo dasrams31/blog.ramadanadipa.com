@@ -46,7 +46,7 @@
   (sudah terbit 2026-10-15 sebagai "RAG Python: Chatbot yang Bisa Baca Dokumen Kamu Sendiri" — topik sama, dicoret 2026-11-22)
 - [x] Menghemat biaya API AI: caching, batching, dan pilih model murah
   (sudah terbit 2026-11-10 sebagai "Biaya API AI 2026: Model Lokal vs Cloud" — caching, batch API, dan router hemat sudah dibahas di sana, dicoret 2026-11-22)
-- [ ] Membuat asisten coding: integrasi AI di VS Code workflow
+- [x] Membuat asisten coding: integrasi AI di VS Code workflow
 
 ## VPS / DevOps
 - [x] Cara deploy website Laravel ke VPS Ubuntu dengan Nginx
