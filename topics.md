@@ -50,7 +50,7 @@
 
 ## VPS / DevOps
 - [x] Cara deploy website Laravel ke VPS Ubuntu dengan Nginx
-- [ ] SSL gratis Let's Encrypt: HTTPS untuk domain sendiri
+- [x] SSL gratis Let's Encrypt: HTTPS untuk domain sendiri
 - [ ] Docker Compose untuk developer: Laravel + MySQL + Redis
 - [ ] Cara setting SSH key: login VPS tanpa password
 - [ ] Nginx reverse proxy: jalankan banyak aplikasi di satu VPS
