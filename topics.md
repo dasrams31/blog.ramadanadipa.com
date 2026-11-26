@@ -91,8 +91,18 @@
 - [x] AI review untuk GitLab dan Bitbucket: pilihan tool di luar GitHub
 - [x] Mengukur kualitas AI code review: addressing rate dan metrik yang jujur
 - [x] AI code review dan keamanan data: apa yang boleh dikirim ke model
-- [ ] File instruksi review: copilot-instructions, AGENTS.md, dan aturan tim
+- [x] File instruksi review: copilot-instructions, AGENTS.md, dan aturan tim
 - [ ] AI review di IDE vs di pull request: kapan pakai yang mana
 - [ ] Biaya AI code review 2026: AI credits, Actions minutes, dan kontrol anggaran
 - [ ] AI reviewer untuk repo monorepo: konteks penuh vs diff saja
 - [ ] AI review untuk tim kecil Indonesia: setup gratis untuk repo open source
+- [ ] GPT-6.2 Astra dan Sol: model OpenAI terbaru untuk coding dan agent
+- [ ] Gemini 4 Neon: model mid-tier Google dengan konteks 1 juta token
+- [ ] Claude Ship: AI yang bisa approve PR sendiri, aman atau tidak
+- [ ] Qwen4-Max: flagship multimodal Alibaba untuk coding
+- [ ] Insiden supply chain PyPI Agent Framework: pelajaran keamanan untuk agen AI
+- [ ] Biaya AI 2026: dari harga per token ke harga per tugas selesai
+- [ ] Keamanan AI agent: izin, sandbox, dan kenapa prompt saja tidak cukup
+- [ ] Menjalankan banyak coding agent sekaligus: Fleetify dan git worktree
+- [ ] Model lokal 27B di laptop: Ternary Bonsai 2.5 dan klaim SWE-bench
+- [ ] Microsoft MAI Code 2: model coding enterprise di dalam Copilot
