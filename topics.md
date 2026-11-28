@@ -92,7 +92,7 @@
 - [x] Mengukur kualitas AI code review: addressing rate dan metrik yang jujur
 - [x] AI code review dan keamanan data: apa yang boleh dikirim ke model
 - [x] File instruksi review: copilot-instructions, AGENTS.md, dan aturan tim
-- [ ] AI review di IDE vs di pull request: kapan pakai yang mana
+- [x] AI review di IDE vs di pull request: kapan pakai yang mana
 - [ ] Biaya AI code review 2026: AI credits, Actions minutes, dan kontrol anggaran
 - [ ] AI reviewer untuk repo monorepo: konteks penuh vs diff saja
 - [ ] AI review untuk tim kecil Indonesia: setup gratis untuk repo open source
